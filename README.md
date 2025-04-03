@@ -1,3 +1,5 @@
+DATA_PATH: /projectnb/cs585bp/students/econlin/VS_Seg-master/data
+
 # Automatic Vestibular Schwannoma Segmentation using Deep Learning
 
 This repository provides scripts for the segmentation of vestibular schwannoma on 3D T1 or T2 images, 
