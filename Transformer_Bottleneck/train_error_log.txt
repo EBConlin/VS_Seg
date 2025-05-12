@@ -1,0 +1,1292 @@
+2025-04-17 23:53:05,964 INFO        Created training_log.txt
+2025-04-17 23:53:05,965 INFO        ----------
+2025-04-17 23:53:05,965 INFO        Parameters: 
+2025-04-17 23:53:05,965 INFO        dataset =                          T1
+2025-04-17 23:53:05,965 INFO        data_root =                        ./data/VS_defaced/
+2025-04-17 23:53:05,965 INFO        split_csv =                        ./params/split_TCIA.csv
+2025-04-17 23:53:05,965 INFO        pad_crop_shape =                   [384, 384, 64]
+2025-04-17 23:53:05,965 INFO        pad_crop_shape_test =              [384, 384, 64]
+2025-04-17 23:53:05,965 INFO        num_workers =                      4
+2025-04-17 23:53:05,965 INFO        torch_device_arg =                 cuda:0
+2025-04-17 23:53:05,965 INFO        train_batch_size =                 1
+2025-04-17 23:53:05,965 INFO        initial_learning_rate =            0.0001
+2025-04-17 23:53:05,965 INFO        epochs_with_const_lr =             100
+2025-04-17 23:53:05,965 INFO        lr_divisor =                       2.0
+2025-04-17 23:53:05,965 INFO        weight_decay =                     1e-07
+2025-04-17 23:53:05,965 INFO        num_epochs =                       300
+2025-04-17 23:53:05,966 INFO        val_interval =                     2
+2025-04-17 23:53:05,966 INFO        model =                            UNet2d5_spvPA
+2025-04-17 23:53:05,966 INFO        sliding_window_inferer_roi_size =  [384, 384, 64]
+2025-04-17 23:53:05,966 INFO        attention =                        True
+2025-04-17 23:53:05,966 INFO        hardness =                         True
+2025-04-17 23:53:05,966 INFO        results_folder_path =              ./data/VS_defaced/results/output
+2025-04-17 23:53:05,966 INFO        export_inferred_segmentations =    True
+2025-04-17 23:53:05,966 INFO        ----------
+2025-04-17 23:53:06,136 INFO        Number of images in training set   = 176
+2025-04-17 23:53:06,136 INFO        Number of images in validation set = 20
+2025-04-17 23:53:06,136 INFO        Number of images in test set       = 46
+2025-04-17 23:53:06,136 INFO        training set   = [{'image': './data/VS_defaced/input_data/vs_gk_1/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_1/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_2/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_2/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_3/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_3/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_4/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_4/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_5/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_5/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_6/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_6/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_7/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_7/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_8/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_8/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_9/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_9/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_10/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_10/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_11/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_11/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_12/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_12/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_13/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_13/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_14/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_14/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_15/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_15/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_16/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_16/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_17/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_17/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_18/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_18/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_19/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_19/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_20/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_20/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_21/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_21/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_22/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_22/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_23/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_23/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_24/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_24/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_25/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_25/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_26/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_26/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_27/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_27/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_28/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_28/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_29/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_29/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_30/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_30/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_31/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_31/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_32/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_32/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_33/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_33/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_34/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_34/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_35/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_35/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_36/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_36/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_37/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_37/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_38/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_38/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_40/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_40/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_41/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_41/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_42/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_42/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_43/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_43/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_44/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_44/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_45/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_45/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_46/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_46/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_47/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_47/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_48/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_48/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_49/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_49/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_50/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_50/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_51/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_51/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_52/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_52/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_53/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_53/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_54/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_54/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_55/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_55/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_56/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_56/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_57/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_57/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_58/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_58/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_59/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_59/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_60/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_60/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_61/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_61/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_62/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_62/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_63/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_63/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_64/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_64/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_65/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_65/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_66/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_66/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_67/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_67/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_68/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_68/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_69/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_69/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_70/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_70/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_71/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_71/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_72/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_72/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_73/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_73/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_74/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_74/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_75/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_75/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_76/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_76/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_77/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_77/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_78/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_78/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_79/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_79/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_80/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_80/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_81/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_81/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_82/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_82/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_83/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_83/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_84/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_84/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_85/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_85/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_86/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_86/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_87/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_87/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_88/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_88/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_89/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_89/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_90/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_90/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_91/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_91/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_92/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_92/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_93/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_93/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_94/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_94/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_95/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_95/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_96/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_96/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_98/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_98/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_99/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_99/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_100/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_100/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_101/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_101/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_102/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_102/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_103/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_103/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_104/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_104/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_105/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_105/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_106/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_106/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_107/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_107/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_108/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_108/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_109/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_109/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_110/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_110/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_111/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_111/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_112/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_112/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_113/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_113/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_114/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_114/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_115/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_115/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_116/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_116/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_117/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_117/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_118/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_118/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_119/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_119/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_120/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_120/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_121/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_121/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_122/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_122/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_123/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_123/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_124/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_124/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_125/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_125/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_126/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_126/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_127/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_127/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_128/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_128/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_129/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_129/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_131/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_131/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_132/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_132/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_133/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_133/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_134/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_134/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_135/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_135/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_136/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_136/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_137/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_137/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_138/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_138/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_139/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_139/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_140/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_140/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_141/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_141/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_142/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_142/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_143/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_143/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_144/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_144/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_145/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_145/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_146/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_146/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_147/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_147/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_148/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_148/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_149/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_149/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_150/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_150/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_151/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_151/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_152/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_152/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_153/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_153/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_154/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_154/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_155/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_155/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_156/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_156/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_157/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_157/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_158/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_158/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_159/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_159/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_161/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_161/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_162/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_162/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_163/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_163/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_164/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_164/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_165/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_165/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_166/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_166/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_167/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_167/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_169/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_169/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_170/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_170/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_171/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_171/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_172/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_172/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_173/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_173/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_174/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_174/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_175/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_175/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_176/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_176/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_177/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_177/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_178/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_178/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_179/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_179/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_180/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_180/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_181/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_181/vs_gk_seg_refT1.nii.gz'}]
+2025-04-17 23:53:06,137 INFO        validation set = [{'image': './data/VS_defaced/input_data/vs_gk_182/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_182/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_183/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_183/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_184/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_184/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_185/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_185/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_186/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_186/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_187/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_187/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_188/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_188/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_189/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_189/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_190/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_190/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_191/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_191/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_192/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_192/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_193/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_193/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_194/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_194/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_195/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_195/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_196/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_196/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_197/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_197/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_198/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_198/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_199/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_199/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_200/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_200/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_201/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_201/vs_gk_seg_refT1.nii.gz'}]
+2025-04-17 23:53:06,137 INFO        test set       = [{'image': './data/VS_defaced/input_data/vs_gk_202/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_202/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_203/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_203/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_204/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_204/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_205/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_205/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_206/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_206/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_207/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_207/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_209/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_209/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_210/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_210/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_211/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_211/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_212/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_212/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_213/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_213/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_214/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_214/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_215/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_215/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_216/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_216/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_217/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_217/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_218/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_218/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_220/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_220/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_221/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_221/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_222/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_222/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_223/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_223/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_224/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_224/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_225/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_225/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_226/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_226/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_228/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_228/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_229/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_229/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_230/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_230/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_231/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_231/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_232/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_232/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_233/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_233/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_234/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_234/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_235/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_235/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_236/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_236/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_237/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_237/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_238/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_238/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_239/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_239/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_240/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_240/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_241/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_241/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_242/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_242/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_243/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_243/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_244/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_244/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_245/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_245/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_246/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_246/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_247/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_247/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_248/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_248/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_249/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_249/vs_gk_seg_refT1.nii.gz'}, {'image': './data/VS_defaced/input_data/vs_gk_250/vs_gk_t1_refT1.nii.gz', 'label': './data/VS_defaced/input_data/vs_gk_250/vs_gk_seg_refT1.nii.gz'}]
+2025-04-17 23:53:06,137 INFO        Getting transforms...
+2025-04-17 23:53:09,286 INFO        ----------
+2025-04-17 23:53:09,286 INFO        Check the transforms on the first validation set image and label
+2025-04-17 23:53:09,286 INFO        Length of check_data = 4
+2025-04-17 23:53:09,286 INFO        check_data['image'].shape = torch.Size([1, 1, 384, 384, 64])
+2025-04-17 23:53:09,286 INFO        Validation image shape = torch.Size([384, 384, 64])
+2025-04-17 23:53:09,286 INFO        Validation label shape = torch.Size([384, 384, 64])
+2025-04-17 23:53:09,345 INFO        ----------
+2025-04-17 23:53:09,345 INFO        Plot one slice of the image and the label
+2025-04-17 23:53:09,345 INFO        image shape: torch.Size([384, 384, 64]), label shape: torch.Size([384, 384, 64]), slice = 19
+2025-04-17 23:53:09,643 INFO        Caching training data set...
+/projectnb/cs585bp/projects/tumor-project/VS_Seg/.venv/lib/python3.8/site-packages/monai/data/dataset.py:498: UserWarning: tqdm is not installed, will not show the caching progress bar.
+  warnings.warn("tqdm is not installed, will not show the caching progress bar.")
+2025-04-17 23:55:45,817 INFO        Caching validation data set...
+2025-04-17 23:56:04,812 INFO        Setting up the model type...
+2025-04-17 23:56:05,074 INFO        Setting up the loss function...
+2025-04-17 23:56:05,074 INFO        Setting up the optimizer...
+2025-04-17 23:56:05,074 INFO        Running the training loop...
+2025-04-17 23:56:05,077 INFO        ----------
+2025-04-17 23:56:05,077 INFO        Epoch 1/300
+2025-04-17 23:56:09,061 INFO        1/176, train_loss: 1.7264
+2025-04-17 23:56:09,627 INFO        2/176, train_loss: 1.7194
+2025-04-17 23:56:10,223 INFO        3/176, train_loss: 1.7045
+2025-04-17 23:56:10,792 INFO        4/176, train_loss: 1.6914
+2025-04-17 23:56:11,376 INFO        5/176, train_loss: 1.6860
+2025-04-17 23:56:11,945 INFO        6/176, train_loss: 1.6934
+2025-04-17 23:56:12,521 INFO        7/176, train_loss: 1.6869
+2025-04-17 23:56:13,098 INFO        8/176, train_loss: 1.6758
+2025-04-17 23:56:13,672 INFO        9/176, train_loss: 1.6722
+2025-04-17 23:56:14,247 INFO        10/176, train_loss: 1.6857
+2025-04-17 23:56:14,822 INFO        11/176, train_loss: 1.6594
+2025-04-17 23:56:15,398 INFO        12/176, train_loss: 1.6630
+2025-04-17 23:56:15,973 INFO        13/176, train_loss: 1.6493
+2025-04-17 23:56:16,548 INFO        14/176, train_loss: 1.6601
+2025-04-17 23:56:17,125 INFO        15/176, train_loss: 1.6465
+2025-04-17 23:56:17,702 INFO        16/176, train_loss: 1.6256
+2025-04-17 23:56:18,277 INFO        17/176, train_loss: 1.6482
+2025-04-17 23:56:18,852 INFO        18/176, train_loss: 1.6263
+2025-04-17 23:56:19,429 INFO        19/176, train_loss: 1.6279
+2025-04-17 23:56:20,004 INFO        20/176, train_loss: 1.6064
+2025-04-17 23:56:20,580 INFO        21/176, train_loss: 1.6277
+2025-04-17 23:56:21,155 INFO        22/176, train_loss: 1.6167
+2025-04-17 23:56:21,730 INFO        23/176, train_loss: 1.6112
+2025-04-17 23:56:22,306 INFO        24/176, train_loss: 1.6175
+2025-04-17 23:56:22,883 INFO        25/176, train_loss: 1.6117
+2025-04-17 23:56:23,459 INFO        26/176, train_loss: 1.6071
+2025-04-17 23:56:24,035 INFO        27/176, train_loss: 1.5956
+2025-04-17 23:56:24,611 INFO        28/176, train_loss: 1.5825
+2025-04-17 23:56:25,188 INFO        29/176, train_loss: 1.6045
+2025-04-17 23:56:25,765 INFO        30/176, train_loss: 1.5973
+2025-04-17 23:56:26,341 INFO        31/176, train_loss: 1.5862
+2025-04-17 23:56:26,918 INFO        32/176, train_loss: 1.5928
+2025-04-17 23:56:27,496 INFO        33/176, train_loss: 1.5919
+2025-04-17 23:56:28,074 INFO        34/176, train_loss: 1.5781
+2025-04-17 23:56:28,651 INFO        35/176, train_loss: 1.5849
+2025-04-17 23:56:29,228 INFO        36/176, train_loss: 1.5835
+2025-04-17 23:56:29,807 INFO        37/176, train_loss: 1.5650
+2025-04-17 23:56:30,383 INFO        38/176, train_loss: 1.5563
+2025-04-17 23:56:30,959 INFO        39/176, train_loss: 1.5379
+2025-04-17 23:56:31,537 INFO        40/176, train_loss: 1.5518
+2025-04-17 23:56:32,116 INFO        41/176, train_loss: 1.5387
+2025-04-17 23:56:32,694 INFO        42/176, train_loss: 1.5344
+2025-04-17 23:56:33,272 INFO        43/176, train_loss: 1.5488
+2025-04-17 23:56:33,847 INFO        44/176, train_loss: 1.5468
+2025-04-17 23:56:34,424 INFO        45/176, train_loss: 1.5621
+2025-04-17 23:56:35,002 INFO        46/176, train_loss: 1.5059
+2025-04-17 23:56:35,579 INFO        47/176, train_loss: 1.5034
+2025-04-17 23:56:36,156 INFO        48/176, train_loss: 1.5565
+2025-04-17 23:56:36,733 INFO        49/176, train_loss: 1.5332
+2025-04-17 23:56:37,310 INFO        50/176, train_loss: 1.4308
+2025-04-17 23:56:37,886 INFO        51/176, train_loss: 1.4196
+2025-04-17 23:56:38,463 INFO        52/176, train_loss: 1.5484
+2025-04-17 23:56:39,040 INFO        53/176, train_loss: 1.5452
+2025-04-17 23:56:39,617 INFO        54/176, train_loss: 1.4375
+2025-04-17 23:56:40,195 INFO        55/176, train_loss: 1.4678
+2025-04-17 23:56:40,773 INFO        56/176, train_loss: 1.4828
+2025-04-17 23:56:41,349 INFO        57/176, train_loss: 1.5251
+2025-04-17 23:56:41,925 INFO        58/176, train_loss: 1.5167
+2025-04-17 23:56:42,502 INFO        59/176, train_loss: 1.3638
+2025-04-17 23:56:43,080 INFO        60/176, train_loss: 1.5387
+2025-04-17 23:56:43,657 INFO        61/176, train_loss: 1.5012
+2025-04-17 23:56:44,233 INFO        62/176, train_loss: 1.5330
+2025-04-17 23:56:44,809 INFO        63/176, train_loss: 1.5404
+2025-04-17 23:56:45,387 INFO        64/176, train_loss: 1.4478
+2025-04-17 23:56:45,963 INFO        65/176, train_loss: 1.5328
+2025-04-17 23:56:46,540 INFO        66/176, train_loss: 1.5108
+2025-04-17 23:56:47,115 INFO        67/176, train_loss: 1.5303
+2025-04-17 23:56:47,693 INFO        68/176, train_loss: 1.4851
+2025-04-17 23:56:48,271 INFO        69/176, train_loss: 1.4932
+2025-04-17 23:56:48,848 INFO        70/176, train_loss: 1.4436
+2025-04-17 23:56:49,427 INFO        71/176, train_loss: 1.2688
+2025-04-17 23:56:50,005 INFO        72/176, train_loss: 1.4355
+2025-04-17 23:56:50,582 INFO        73/176, train_loss: 1.3727
+2025-04-17 23:56:51,158 INFO        74/176, train_loss: 1.3240
+2025-04-17 23:56:51,734 INFO        75/176, train_loss: 1.5255
+2025-04-17 23:56:52,311 INFO        76/176, train_loss: 1.3620
+2025-04-17 23:56:52,887 INFO        77/176, train_loss: 1.4496
+2025-04-17 23:56:53,465 INFO        78/176, train_loss: 1.5221
+2025-04-17 23:56:54,042 INFO        79/176, train_loss: 1.3360
+2025-04-17 23:56:54,619 INFO        80/176, train_loss: 1.5204
+2025-04-17 23:56:55,195 INFO        81/176, train_loss: 1.5193
+2025-04-17 23:56:55,772 INFO        82/176, train_loss: 1.3654
+2025-04-17 23:56:56,350 INFO        83/176, train_loss: 1.5057
+2025-04-17 23:56:56,927 INFO        84/176, train_loss: 1.5235
+2025-04-17 23:56:57,505 INFO        85/176, train_loss: 1.4320
+2025-04-17 23:56:58,082 INFO        86/176, train_loss: 1.5037
+2025-04-17 23:56:58,660 INFO        87/176, train_loss: 1.3475
+2025-04-17 23:56:59,238 INFO        88/176, train_loss: 1.2352
+2025-04-17 23:56:59,815 INFO        89/176, train_loss: 1.3173
+2025-04-17 23:57:00,392 INFO        90/176, train_loss: 1.1768
+2025-04-17 23:57:00,969 INFO        91/176, train_loss: 1.5147
+2025-04-17 23:57:01,547 INFO        92/176, train_loss: 1.5081
+2025-04-17 23:57:02,124 INFO        93/176, train_loss: 1.2279
+2025-04-17 23:57:02,702 INFO        94/176, train_loss: 1.3570
+2025-04-17 23:57:03,279 INFO        95/176, train_loss: 1.5192
+2025-04-17 23:57:03,856 INFO        96/176, train_loss: 1.5016
+2025-04-17 23:57:04,436 INFO        97/176, train_loss: 1.5033
+2025-04-17 23:57:05,015 INFO        98/176, train_loss: 1.4815
+2025-04-17 23:57:05,592 INFO        99/176, train_loss: 1.4360
+2025-04-17 23:57:06,172 INFO        100/176, train_loss: 1.5125
+2025-04-17 23:57:06,751 INFO        101/176, train_loss: 1.2658
+2025-04-17 23:57:07,329 INFO        102/176, train_loss: 1.4457
+2025-04-17 23:57:07,906 INFO        103/176, train_loss: 1.2223
+2025-04-17 23:57:08,484 INFO        104/176, train_loss: 1.3897
+2025-04-17 23:57:09,065 INFO        105/176, train_loss: 1.5136
+2025-04-17 23:57:09,644 INFO        106/176, train_loss: 1.3076
+2025-04-17 23:57:10,222 INFO        107/176, train_loss: 1.1881
+2025-04-17 23:57:10,801 INFO        108/176, train_loss: 1.1704
+2025-04-17 23:57:11,379 INFO        109/176, train_loss: 1.2432
+2025-04-17 23:57:11,957 INFO        110/176, train_loss: 1.5114
+2025-04-17 23:57:12,534 INFO        111/176, train_loss: 1.5119
+2025-04-17 23:57:13,111 INFO        112/176, train_loss: 1.4207
+2025-04-17 23:57:13,689 INFO        113/176, train_loss: 1.1686
+2025-04-17 23:57:14,268 INFO        114/176, train_loss: 1.5093
+2025-04-17 23:57:14,846 INFO        115/176, train_loss: 1.5005
+2025-04-17 23:57:15,423 INFO        116/176, train_loss: 1.3198
+2025-04-17 23:57:16,001 INFO        117/176, train_loss: 1.1249
+2025-04-17 23:57:16,579 INFO        118/176, train_loss: 1.5022
+2025-04-17 23:57:17,156 INFO        119/176, train_loss: 1.2752
+2025-04-17 23:57:17,732 INFO        120/176, train_loss: 1.5084
+2025-04-17 23:57:18,310 INFO        121/176, train_loss: 1.1595
+2025-04-17 23:57:18,889 INFO        122/176, train_loss: 1.5023
+2025-04-17 23:57:19,468 INFO        123/176, train_loss: 1.4174
+2025-04-17 23:57:20,046 INFO        124/176, train_loss: 1.2983
+2025-04-17 23:57:20,624 INFO        125/176, train_loss: 1.1263
+2025-04-17 23:57:21,203 INFO        126/176, train_loss: 1.0994
+2025-04-17 23:57:21,781 INFO        127/176, train_loss: 1.0796
+2025-04-17 23:57:22,359 INFO        128/176, train_loss: 1.5075
+2025-04-17 23:57:22,936 INFO        129/176, train_loss: 1.5069
+2025-04-17 23:57:23,512 INFO        130/176, train_loss: 1.2295
+2025-04-17 23:57:24,089 INFO        131/176, train_loss: 1.2341
+2025-04-17 23:57:24,667 INFO        132/176, train_loss: 1.5067
+2025-04-17 23:57:25,245 INFO        133/176, train_loss: 1.2083
+2025-04-17 23:57:25,822 INFO        134/176, train_loss: 1.0858
+2025-04-17 23:57:26,401 INFO        135/176, train_loss: 1.0768
+2025-04-17 23:57:26,980 INFO        136/176, train_loss: 1.1223
+2025-04-17 23:57:27,558 INFO        137/176, train_loss: 1.1000
+2025-04-17 23:57:28,136 INFO        138/176, train_loss: 1.5056
+2025-04-17 23:57:28,713 INFO        139/176, train_loss: 1.3209
+2025-04-17 23:57:29,290 INFO        140/176, train_loss: 1.0068
+2025-04-17 23:57:29,870 INFO        141/176, train_loss: 1.1654
+2025-04-17 23:57:30,451 INFO        142/176, train_loss: 1.5061
+2025-04-17 23:57:31,028 INFO        143/176, train_loss: 1.5058
+2025-04-17 23:57:31,607 INFO        144/176, train_loss: 1.1231
+2025-04-17 23:57:32,186 INFO        145/176, train_loss: 1.5052
+2025-04-17 23:57:32,766 INFO        146/176, train_loss: 1.4604
+2025-04-17 23:57:33,345 INFO        147/176, train_loss: 1.4361
+2025-04-17 23:57:33,923 INFO        148/176, train_loss: 1.0591
+2025-04-17 23:57:34,502 INFO        149/176, train_loss: 0.9640
+2025-04-17 23:57:35,083 INFO        150/176, train_loss: 1.4915
+2025-04-17 23:57:35,665 INFO        151/176, train_loss: 1.4519
+2025-04-17 23:57:36,246 INFO        152/176, train_loss: 0.9798
+2025-04-17 23:57:36,827 INFO        153/176, train_loss: 1.2176
+2025-04-17 23:57:37,407 INFO        154/176, train_loss: 1.4778
+2025-04-17 23:57:37,988 INFO        155/176, train_loss: 0.8759
+2025-04-17 23:57:38,566 INFO        156/176, train_loss: 0.8924
+2025-04-17 23:57:39,144 INFO        157/176, train_loss: 0.8467
+2025-04-17 23:57:39,722 INFO        158/176, train_loss: 1.0329
+2025-04-17 23:57:40,301 INFO        159/176, train_loss: 1.1420
+2025-04-17 23:57:40,880 INFO        160/176, train_loss: 1.5019
+2025-04-17 23:57:41,458 INFO        161/176, train_loss: 0.9151
+2025-04-17 23:57:42,036 INFO        162/176, train_loss: 0.9438
+2025-04-17 23:57:42,614 INFO        163/176, train_loss: 1.5023
+2025-04-17 23:57:43,193 INFO        164/176, train_loss: 1.5018
+2025-04-17 23:57:43,772 INFO        165/176, train_loss: 0.8646
+2025-04-17 23:57:44,348 INFO        166/176, train_loss: 1.4548
+2025-04-17 23:57:44,926 INFO        167/176, train_loss: 1.5017
+2025-04-17 23:57:45,507 INFO        168/176, train_loss: 1.5037
+2025-04-17 23:57:46,086 INFO        169/176, train_loss: 1.0221
+2025-04-17 23:57:46,663 INFO        170/176, train_loss: 1.5020
+2025-04-17 23:57:47,240 INFO        171/176, train_loss: 0.8328
+2025-04-17 23:57:47,818 INFO        172/176, train_loss: 0.8083
+2025-04-17 23:57:48,396 INFO        173/176, train_loss: 1.5014
+2025-04-17 23:57:48,973 INFO        174/176, train_loss: 0.6816
+2025-04-17 23:57:49,550 INFO        175/176, train_loss: 1.5018
+2025-04-17 23:57:50,129 INFO        176/176, train_loss: 1.2154
+2025-04-17 23:57:50,178 INFO        epoch 1 average loss: 1.4146
+2025-04-17 23:57:50,178 INFO        ----------
+2025-04-17 23:57:50,178 INFO        Epoch 2/300
+2025-04-17 23:59:32,682 INFO        epoch 2 average loss: 1.0158
+2025-04-17 23:59:37,237 INFO        saved new best metric model
+2025-04-17 23:59:37,237 INFO        current epoch 2 current mean dice: 0.5620 best mean dice: 0.5620 at epoch 2
+2025-04-17 23:59:37,237 INFO        ----------
+2025-04-17 23:59:37,237 INFO        Epoch 3/300
+2025-04-17 23:59:37,237 INFO        Average duration of first 2 epochs = 106.08 s. Expected total training time = 8.84 h
+2025-04-18 00:01:19,522 INFO        epoch 3 average loss: 0.9020
+2025-04-18 00:01:19,522 INFO        ----------
+2025-04-18 00:01:19,522 INFO        Epoch 4/300
+2025-04-18 00:03:01,912 INFO        epoch 4 average loss: 0.8000
+2025-04-18 00:03:06,390 INFO        saved new best metric model
+2025-04-18 00:03:06,390 INFO        current epoch 4 current mean dice: 0.7487 best mean dice: 0.7487 at epoch 4
+2025-04-18 00:03:06,390 INFO        ----------
+2025-04-18 00:03:06,391 INFO        Epoch 5/300
+2025-04-18 00:04:48,761 INFO        epoch 5 average loss: 0.8430
+2025-04-18 00:04:48,761 INFO        ----------
+2025-04-18 00:04:48,761 INFO        Epoch 6/300
+2025-04-18 00:06:31,208 INFO        epoch 6 average loss: 0.7791
+2025-04-18 00:06:35,878 INFO        saved new best metric model
+2025-04-18 00:06:35,879 INFO        current epoch 6 current mean dice: 0.8140 best mean dice: 0.8140 at epoch 6
+2025-04-18 00:06:35,879 INFO        ----------
+2025-04-18 00:06:35,879 INFO        Epoch 7/300
+2025-04-18 00:08:18,245 INFO        epoch 7 average loss: 0.7391
+2025-04-18 00:08:18,245 INFO        ----------
+2025-04-18 00:08:18,245 INFO        Epoch 8/300
+2025-04-18 00:10:00,644 INFO        epoch 8 average loss: 0.7495
+2025-04-18 00:10:05,150 INFO        current epoch 8 current mean dice: 0.6296 best mean dice: 0.8140 at epoch 6
+2025-04-18 00:10:05,150 INFO        ----------
+2025-04-18 00:10:05,150 INFO        Epoch 9/300
+2025-04-18 00:11:47,612 INFO        epoch 9 average loss: 0.7424
+2025-04-18 00:11:47,612 INFO        ----------
+2025-04-18 00:11:47,612 INFO        Epoch 10/300
+2025-04-18 00:13:30,088 INFO        epoch 10 average loss: 0.7727
+2025-04-18 00:13:34,549 INFO        current epoch 10 current mean dice: 0.6656 best mean dice: 0.8140 at epoch 6
+2025-04-18 00:13:34,550 INFO        ----------
+2025-04-18 00:13:34,550 INFO        Epoch 11/300
+2025-04-18 00:15:17,035 INFO        epoch 11 average loss: 0.7700
+2025-04-18 00:15:17,036 INFO        ----------
+2025-04-18 00:15:17,036 INFO        Epoch 12/300
+2025-04-18 00:16:59,539 INFO        epoch 12 average loss: 0.6700
+2025-04-18 00:17:04,148 INFO        saved new best metric model
+2025-04-18 00:17:04,149 INFO        current epoch 12 current mean dice: 0.8234 best mean dice: 0.8234 at epoch 12
+2025-04-18 00:17:04,154 INFO        ----------
+2025-04-18 00:17:04,158 INFO        Epoch 13/300
+2025-04-18 00:18:46,726 INFO        epoch 13 average loss: 0.7390
+2025-04-18 00:18:46,726 INFO        ----------
+2025-04-18 00:18:46,726 INFO        Epoch 14/300
+2025-04-18 00:20:29,129 INFO        epoch 14 average loss: 1.2337
+2025-04-18 00:20:33,667 INFO        current epoch 14 current mean dice: 0.4139 best mean dice: 0.8234 at epoch 12
+2025-04-18 00:20:33,668 INFO        ----------
+2025-04-18 00:20:33,668 INFO        Epoch 15/300
+2025-04-18 00:22:16,107 INFO        epoch 15 average loss: 1.0860
+2025-04-18 00:22:16,107 INFO        ----------
+2025-04-18 00:22:16,107 INFO        Epoch 16/300
+2025-04-18 00:23:58,447 INFO        epoch 16 average loss: 0.9869
+2025-04-18 00:24:03,030 INFO        saved new best metric model
+2025-04-18 00:24:03,030 INFO        current epoch 16 current mean dice: 0.8620 best mean dice: 0.8620 at epoch 16
+2025-04-18 00:24:03,034 INFO        ----------
+2025-04-18 00:24:03,037 INFO        Epoch 17/300
+2025-04-18 00:25:45,590 INFO        epoch 17 average loss: 0.9576
+2025-04-18 00:25:45,591 INFO        ----------
+2025-04-18 00:25:45,591 INFO        Epoch 18/300
+2025-04-18 00:27:28,003 INFO        epoch 18 average loss: 0.9802
+2025-04-18 00:27:32,563 INFO        current epoch 18 current mean dice: 0.7436 best mean dice: 0.8620 at epoch 16
+2025-04-18 00:27:32,564 INFO        ----------
+2025-04-18 00:27:32,564 INFO        Epoch 19/300
+2025-04-18 00:29:15,116 INFO        epoch 19 average loss: 0.9405
+2025-04-18 00:29:15,116 INFO        ----------
+2025-04-18 00:29:15,116 INFO        Epoch 20/300
+2025-04-18 00:30:57,620 INFO        epoch 20 average loss: 0.9509
+2025-04-18 00:31:02,052 INFO        current epoch 20 current mean dice: 0.8253 best mean dice: 0.8620 at epoch 16
+2025-04-18 00:31:02,053 INFO        ----------
+2025-04-18 00:31:02,053 INFO        Epoch 21/300
+2025-04-18 00:32:44,316 INFO        epoch 21 average loss: 0.9515
+2025-04-18 00:32:44,316 INFO        ----------
+2025-04-18 00:32:44,316 INFO        Epoch 22/300
+2025-04-18 00:34:26,838 INFO        epoch 22 average loss: 0.9741
+2025-04-18 00:34:31,294 INFO        current epoch 22 current mean dice: 0.7442 best mean dice: 0.8620 at epoch 16
+2025-04-18 00:34:31,295 INFO        ----------
+2025-04-18 00:34:31,295 INFO        Epoch 23/300
+2025-04-18 00:36:13,752 INFO        epoch 23 average loss: 0.9549
+2025-04-18 00:36:13,753 INFO        ----------
+2025-04-18 00:36:13,753 INFO        Epoch 24/300
+2025-04-18 00:37:56,076 INFO        epoch 24 average loss: 0.9499
+2025-04-18 00:38:00,582 INFO        saved new best metric model
+2025-04-18 00:38:00,583 INFO        current epoch 24 current mean dice: 0.8657 best mean dice: 0.8657 at epoch 24
+2025-04-18 00:38:00,583 INFO        ----------
+2025-04-18 00:38:00,583 INFO        Epoch 25/300
+2025-04-18 00:39:43,109 INFO        epoch 25 average loss: 0.9205
+2025-04-18 00:39:43,109 INFO        ----------
+2025-04-18 00:39:43,109 INFO        Epoch 26/300
+2025-04-18 00:41:25,441 INFO        epoch 26 average loss: 0.9019
+2025-04-18 00:41:29,910 INFO        current epoch 26 current mean dice: 0.8602 best mean dice: 0.8657 at epoch 24
+2025-04-18 00:41:29,911 INFO        ----------
+2025-04-18 00:41:29,911 INFO        Epoch 27/300
+2025-04-18 00:43:12,361 INFO        epoch 27 average loss: 0.9260
+2025-04-18 00:43:12,361 INFO        ----------
+2025-04-18 00:43:12,361 INFO        Epoch 28/300
+2025-04-18 00:44:54,674 INFO        epoch 28 average loss: 0.9225
+2025-04-18 00:44:59,143 INFO        current epoch 28 current mean dice: 0.8642 best mean dice: 0.8657 at epoch 24
+2025-04-18 00:44:59,143 INFO        ----------
+2025-04-18 00:44:59,143 INFO        Epoch 29/300
+2025-04-18 00:46:41,533 INFO        epoch 29 average loss: 0.9453
+2025-04-18 00:46:41,533 INFO        ----------
+2025-04-18 00:46:41,533 INFO        Epoch 30/300
+2025-04-18 00:48:24,037 INFO        epoch 30 average loss: 0.9034
+2025-04-18 00:48:28,540 INFO        saved new best metric model
+2025-04-18 00:48:28,540 INFO        current epoch 30 current mean dice: 0.8700 best mean dice: 0.8700 at epoch 30
+2025-04-18 00:48:28,542 INFO        ----------
+2025-04-18 00:48:28,542 INFO        Epoch 31/300
+2025-04-18 00:50:11,127 INFO        epoch 31 average loss: 0.9323
+2025-04-18 00:50:11,127 INFO        ----------
+2025-04-18 00:50:11,127 INFO        Epoch 32/300
+2025-04-18 00:51:53,641 INFO        epoch 32 average loss: 0.9240
+2025-04-18 00:51:58,187 INFO        saved new best metric model
+2025-04-18 00:51:58,187 INFO        current epoch 32 current mean dice: 0.8815 best mean dice: 0.8815 at epoch 32
+2025-04-18 00:51:58,191 INFO        ----------
+2025-04-18 00:51:58,193 INFO        Epoch 33/300
+2025-04-18 00:53:40,832 INFO        epoch 33 average loss: 0.8743
+2025-04-18 00:53:40,832 INFO        ----------
+2025-04-18 00:53:40,832 INFO        Epoch 34/300
+2025-04-18 00:55:23,333 INFO        epoch 34 average loss: 0.9131
+2025-04-18 00:55:27,908 INFO        current epoch 34 current mean dice: 0.8734 best mean dice: 0.8815 at epoch 32
+2025-04-18 00:55:27,909 INFO        ----------
+2025-04-18 00:55:27,909 INFO        Epoch 35/300
+2025-04-18 00:57:10,443 INFO        epoch 35 average loss: 0.8534
+2025-04-18 00:57:10,443 INFO        ----------
+2025-04-18 00:57:10,443 INFO        Epoch 36/300
+2025-04-18 00:58:52,904 INFO        epoch 36 average loss: 0.8700
+2025-04-18 00:58:57,483 INFO        current epoch 36 current mean dice: 0.8784 best mean dice: 0.8815 at epoch 32
+2025-04-18 00:58:57,483 INFO        ----------
+2025-04-18 00:58:57,483 INFO        Epoch 37/300
+2025-04-18 01:00:40,099 INFO        epoch 37 average loss: 0.8765
+2025-04-18 01:00:40,099 INFO        ----------
+2025-04-18 01:00:40,099 INFO        Epoch 38/300
+2025-04-18 01:02:22,473 INFO        epoch 38 average loss: 0.9274
+2025-04-18 01:02:27,004 INFO        current epoch 38 current mean dice: 0.8633 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:02:27,005 INFO        ----------
+2025-04-18 01:02:27,005 INFO        Epoch 39/300
+2025-04-18 01:04:09,517 INFO        epoch 39 average loss: 0.8947
+2025-04-18 01:04:09,517 INFO        ----------
+2025-04-18 01:04:09,517 INFO        Epoch 40/300
+2025-04-18 01:05:51,910 INFO        epoch 40 average loss: 0.8778
+2025-04-18 01:05:56,395 INFO        current epoch 40 current mean dice: 0.8483 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:05:56,395 INFO        ----------
+2025-04-18 01:05:56,396 INFO        Epoch 41/300
+2025-04-18 01:07:38,810 INFO        epoch 41 average loss: 0.8640
+2025-04-18 01:07:38,810 INFO        ----------
+2025-04-18 01:07:38,810 INFO        Epoch 42/300
+2025-04-18 01:09:21,289 INFO        epoch 42 average loss: 0.8924
+2025-04-18 01:09:25,813 INFO        current epoch 42 current mean dice: 0.6527 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:09:25,813 INFO        ----------
+2025-04-18 01:09:25,814 INFO        Epoch 43/300
+2025-04-18 01:11:08,353 INFO        epoch 43 average loss: 0.8699
+2025-04-18 01:11:08,353 INFO        ----------
+2025-04-18 01:11:08,353 INFO        Epoch 44/300
+2025-04-18 01:12:50,819 INFO        epoch 44 average loss: 0.8473
+2025-04-18 01:12:55,271 INFO        current epoch 44 current mean dice: 0.8808 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:12:55,272 INFO        ----------
+2025-04-18 01:12:55,272 INFO        Epoch 45/300
+2025-04-18 01:14:37,653 INFO        epoch 45 average loss: 0.8306
+2025-04-18 01:14:37,653 INFO        ----------
+2025-04-18 01:14:37,653 INFO        Epoch 46/300
+2025-04-18 01:16:19,997 INFO        epoch 46 average loss: 0.8279
+2025-04-18 01:16:24,573 INFO        current epoch 46 current mean dice: 0.8776 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:16:24,574 INFO        ----------
+2025-04-18 01:16:24,574 INFO        Epoch 47/300
+2025-04-18 01:18:07,105 INFO        epoch 47 average loss: 0.8249
+2025-04-18 01:18:07,105 INFO        ----------
+2025-04-18 01:18:07,105 INFO        Epoch 48/300
+2025-04-18 01:19:49,529 INFO        epoch 48 average loss: 0.8150
+2025-04-18 01:19:54,054 INFO        current epoch 48 current mean dice: 0.8795 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:19:54,055 INFO        ----------
+2025-04-18 01:19:54,055 INFO        Epoch 49/300
+2025-04-18 01:21:36,569 INFO        epoch 49 average loss: 0.8382
+2025-04-18 01:21:36,569 INFO        ----------
+2025-04-18 01:21:36,569 INFO        Epoch 50/300
+2025-04-18 01:23:18,941 INFO        epoch 50 average loss: 0.8402
+2025-04-18 01:23:23,388 INFO        current epoch 50 current mean dice: 0.8768 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:23:23,388 INFO        ----------
+2025-04-18 01:23:23,388 INFO        Epoch 51/300
+2025-04-18 01:25:05,903 INFO        epoch 51 average loss: 0.8448
+2025-04-18 01:25:05,904 INFO        ----------
+2025-04-18 01:25:05,904 INFO        Epoch 52/300
+2025-04-18 01:26:48,519 INFO        epoch 52 average loss: 0.8352
+2025-04-18 01:26:53,080 INFO        current epoch 52 current mean dice: 0.8633 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:26:53,081 INFO        ----------
+2025-04-18 01:26:53,084 INFO        Epoch 53/300
+2025-04-18 01:28:35,758 INFO        epoch 53 average loss: 0.8382
+2025-04-18 01:28:35,759 INFO        ----------
+2025-04-18 01:28:35,759 INFO        Epoch 54/300
+2025-04-18 01:30:18,293 INFO        epoch 54 average loss: 0.8333
+2025-04-18 01:30:22,837 INFO        current epoch 54 current mean dice: 0.8780 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:30:22,837 INFO        ----------
+2025-04-18 01:30:22,843 INFO        Epoch 55/300
+2025-04-18 01:32:05,215 INFO        epoch 55 average loss: 0.8303
+2025-04-18 01:32:05,216 INFO        ----------
+2025-04-18 01:32:05,216 INFO        Epoch 56/300
+2025-04-18 01:33:47,725 INFO        epoch 56 average loss: 0.8217
+2025-04-18 01:33:52,203 INFO        current epoch 56 current mean dice: 0.8649 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:33:52,204 INFO        ----------
+2025-04-18 01:33:52,204 INFO        Epoch 57/300
+2025-04-18 01:35:34,714 INFO        epoch 57 average loss: 0.8202
+2025-04-18 01:35:34,715 INFO        ----------
+2025-04-18 01:35:34,715 INFO        Epoch 58/300
+2025-04-18 01:37:17,200 INFO        epoch 58 average loss: 0.8195
+2025-04-18 01:37:21,653 INFO        current epoch 58 current mean dice: 0.8725 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:37:21,654 INFO        ----------
+2025-04-18 01:37:21,654 INFO        Epoch 59/300
+2025-04-18 01:39:04,041 INFO        epoch 59 average loss: 0.8379
+2025-04-18 01:39:04,042 INFO        ----------
+2025-04-18 01:39:04,042 INFO        Epoch 60/300
+2025-04-18 01:40:46,547 INFO        epoch 60 average loss: 0.8203
+2025-04-18 01:40:50,982 INFO        current epoch 60 current mean dice: 0.8409 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:40:50,982 INFO        ----------
+2025-04-18 01:40:50,982 INFO        Epoch 61/300
+2025-04-18 01:42:33,380 INFO        epoch 61 average loss: 0.8108
+2025-04-18 01:42:33,380 INFO        ----------
+2025-04-18 01:42:33,380 INFO        Epoch 62/300
+2025-04-18 01:44:15,910 INFO        epoch 62 average loss: 0.8513
+2025-04-18 01:44:20,380 INFO        current epoch 62 current mean dice: 0.8625 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:44:20,380 INFO        ----------
+2025-04-18 01:44:20,380 INFO        Epoch 63/300
+2025-04-18 01:46:02,917 INFO        epoch 63 average loss: 0.8464
+2025-04-18 01:46:02,917 INFO        ----------
+2025-04-18 01:46:02,917 INFO        Epoch 64/300
+2025-04-18 01:47:45,395 INFO        epoch 64 average loss: 0.8291
+2025-04-18 01:47:49,900 INFO        current epoch 64 current mean dice: 0.8540 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:47:49,900 INFO        ----------
+2025-04-18 01:47:49,905 INFO        Epoch 65/300
+2025-04-18 01:49:32,466 INFO        epoch 65 average loss: 0.8305
+2025-04-18 01:49:32,466 INFO        ----------
+2025-04-18 01:49:32,466 INFO        Epoch 66/300
+2025-04-18 01:51:15,009 INFO        epoch 66 average loss: 0.8318
+2025-04-18 01:51:19,563 INFO        current epoch 66 current mean dice: 0.8759 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:51:19,563 INFO        ----------
+2025-04-18 01:51:19,566 INFO        Epoch 67/300
+2025-04-18 01:53:02,003 INFO        epoch 67 average loss: 0.8305
+2025-04-18 01:53:02,003 INFO        ----------
+2025-04-18 01:53:02,003 INFO        Epoch 68/300
+2025-04-18 01:54:44,518 INFO        epoch 68 average loss: 0.8049
+2025-04-18 01:54:49,090 INFO        current epoch 68 current mean dice: 0.8673 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:54:49,090 INFO        ----------
+2025-04-18 01:54:49,090 INFO        Epoch 69/300
+2025-04-18 01:56:31,637 INFO        epoch 69 average loss: 0.8225
+2025-04-18 01:56:31,637 INFO        ----------
+2025-04-18 01:56:31,637 INFO        Epoch 70/300
+2025-04-18 01:58:14,110 INFO        epoch 70 average loss: 0.8389
+2025-04-18 01:58:18,638 INFO        current epoch 70 current mean dice: 0.7187 best mean dice: 0.8815 at epoch 32
+2025-04-18 01:58:18,639 INFO        ----------
+2025-04-18 01:58:18,639 INFO        Epoch 71/300
+2025-04-18 02:00:01,149 INFO        epoch 71 average loss: 0.8218
+2025-04-18 02:00:01,149 INFO        ----------
+2025-04-18 02:00:01,149 INFO        Epoch 72/300
+2025-04-18 02:01:43,648 INFO        epoch 72 average loss: 0.8209
+2025-04-18 02:01:48,113 INFO        current epoch 72 current mean dice: 0.8359 best mean dice: 0.8815 at epoch 32
+2025-04-18 02:01:48,114 INFO        ----------
+2025-04-18 02:01:48,114 INFO        Epoch 73/300
+2025-04-18 02:03:30,630 INFO        epoch 73 average loss: 0.8320
+2025-04-18 02:03:30,631 INFO        ----------
+2025-04-18 02:03:30,631 INFO        Epoch 74/300
+2025-04-18 02:05:13,052 INFO        epoch 74 average loss: 0.7971
+2025-04-18 02:05:17,501 INFO        current epoch 74 current mean dice: 0.8541 best mean dice: 0.8815 at epoch 32
+2025-04-18 02:05:17,502 INFO        ----------
+2025-04-18 02:05:17,502 INFO        Epoch 75/300
+2025-04-18 02:07:00,049 INFO        epoch 75 average loss: 0.8857
+2025-04-18 02:07:00,049 INFO        ----------
+2025-04-18 02:07:00,049 INFO        Epoch 76/300
+2025-04-18 02:08:42,476 INFO        epoch 76 average loss: 0.8384
+2025-04-18 02:08:47,027 INFO        current epoch 76 current mean dice: 0.8715 best mean dice: 0.8815 at epoch 32
+2025-04-18 02:08:47,027 INFO        ----------
+2025-04-18 02:08:47,027 INFO        Epoch 77/300
+2025-04-18 02:10:29,526 INFO        epoch 77 average loss: 0.8396
+2025-04-18 02:10:29,526 INFO        ----------
+2025-04-18 02:10:29,526 INFO        Epoch 78/300
+2025-04-18 02:12:12,139 INFO        epoch 78 average loss: 0.8263
+2025-04-18 02:12:16,623 INFO        current epoch 78 current mean dice: 0.8590 best mean dice: 0.8815 at epoch 32
+2025-04-18 02:12:16,623 INFO        ----------
+2025-04-18 02:12:16,623 INFO        Epoch 79/300
+2025-04-18 02:13:58,992 INFO        epoch 79 average loss: 0.8257
+2025-04-18 02:13:58,992 INFO        ----------
+2025-04-18 02:13:58,992 INFO        Epoch 80/300
+2025-04-18 02:15:41,547 INFO        epoch 80 average loss: 0.8251
+2025-04-18 02:15:46,071 INFO        saved new best metric model
+2025-04-18 02:15:46,071 INFO        current epoch 80 current mean dice: 0.8883 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:15:46,075 INFO        ----------
+2025-04-18 02:15:46,077 INFO        Epoch 81/300
+2025-04-18 02:17:28,758 INFO        epoch 81 average loss: 0.8154
+2025-04-18 02:17:28,758 INFO        ----------
+2025-04-18 02:17:28,758 INFO        Epoch 82/300
+2025-04-18 02:19:11,319 INFO        epoch 82 average loss: 0.8137
+2025-04-18 02:19:15,851 INFO        current epoch 82 current mean dice: 0.8790 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:19:15,851 INFO        ----------
+2025-04-18 02:19:15,855 INFO        Epoch 83/300
+2025-04-18 02:20:58,520 INFO        epoch 83 average loss: 0.8216
+2025-04-18 02:20:58,520 INFO        ----------
+2025-04-18 02:20:58,520 INFO        Epoch 84/300
+2025-04-18 02:22:41,068 INFO        epoch 84 average loss: 0.8163
+2025-04-18 02:22:45,522 INFO        current epoch 84 current mean dice: 0.8794 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:22:45,522 INFO        ----------
+2025-04-18 02:22:45,522 INFO        Epoch 85/300
+2025-04-18 02:24:28,224 INFO        epoch 85 average loss: 0.7745
+2025-04-18 02:24:28,224 INFO        ----------
+2025-04-18 02:24:28,224 INFO        Epoch 86/300
+2025-04-18 02:26:10,754 INFO        epoch 86 average loss: 0.7695
+2025-04-18 02:26:15,189 INFO        current epoch 86 current mean dice: 0.8771 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:26:15,189 INFO        ----------
+2025-04-18 02:26:15,189 INFO        Epoch 87/300
+2025-04-18 02:27:57,631 INFO        epoch 87 average loss: 0.7623
+2025-04-18 02:27:57,631 INFO        ----------
+2025-04-18 02:27:57,631 INFO        Epoch 88/300
+2025-04-18 02:29:40,050 INFO        epoch 88 average loss: 0.7814
+2025-04-18 02:29:44,478 INFO        current epoch 88 current mean dice: 0.8240 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:29:44,478 INFO        ----------
+2025-04-18 02:29:44,478 INFO        Epoch 89/300
+2025-04-18 02:31:27,138 INFO        epoch 89 average loss: 0.7841
+2025-04-18 02:31:27,138 INFO        ----------
+2025-04-18 02:31:27,138 INFO        Epoch 90/300
+2025-04-18 02:33:09,554 INFO        epoch 90 average loss: 0.7634
+2025-04-18 02:33:14,049 INFO        current epoch 90 current mean dice: 0.7715 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:33:14,050 INFO        ----------
+2025-04-18 02:33:14,050 INFO        Epoch 91/300
+2025-04-18 02:34:56,584 INFO        epoch 91 average loss: 0.7731
+2025-04-18 02:34:56,584 INFO        ----------
+2025-04-18 02:34:56,584 INFO        Epoch 92/300
+2025-04-18 02:36:38,987 INFO        epoch 92 average loss: 0.7734
+2025-04-18 02:36:43,424 INFO        current epoch 92 current mean dice: 0.8776 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:36:43,425 INFO        ----------
+2025-04-18 02:36:43,425 INFO        Epoch 93/300
+2025-04-18 02:38:25,991 INFO        epoch 93 average loss: 0.7837
+2025-04-18 02:38:25,992 INFO        ----------
+2025-04-18 02:38:25,992 INFO        Epoch 94/300
+2025-04-18 02:40:08,669 INFO        epoch 94 average loss: 0.7947
+2025-04-18 02:40:13,178 INFO        current epoch 94 current mean dice: 0.8185 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:40:13,179 INFO        ----------
+2025-04-18 02:40:13,179 INFO        Epoch 95/300
+2025-04-18 02:41:55,651 INFO        epoch 95 average loss: 0.7727
+2025-04-18 02:41:55,651 INFO        ----------
+2025-04-18 02:41:55,651 INFO        Epoch 96/300
+2025-04-18 02:43:38,174 INFO        epoch 96 average loss: 0.7777
+2025-04-18 02:43:42,691 INFO        current epoch 96 current mean dice: 0.8781 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:43:42,691 INFO        ----------
+2025-04-18 02:43:42,697 INFO        Epoch 97/300
+2025-04-18 02:45:25,204 INFO        epoch 97 average loss: 0.7985
+2025-04-18 02:45:25,204 INFO        ----------
+2025-04-18 02:45:25,204 INFO        Epoch 98/300
+2025-04-18 02:47:07,629 INFO        epoch 98 average loss: 0.7813
+2025-04-18 02:47:12,211 INFO        current epoch 98 current mean dice: 0.8707 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:47:12,212 INFO        ----------
+2025-04-18 02:47:12,214 INFO        Epoch 99/300
+2025-04-18 02:48:54,586 INFO        epoch 99 average loss: 0.7692
+2025-04-18 02:48:54,586 INFO        ----------
+2025-04-18 02:48:54,586 INFO        Epoch 100/300
+2025-04-18 02:50:37,022 INFO        epoch 100 average loss: 0.7647
+2025-04-18 02:50:41,582 INFO        current epoch 100 current mean dice: 0.8869 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:50:41,583 INFO        Dividing learning rate by 2.0. New learning rate is: lr = 5e-05
+2025-04-18 02:50:41,586 INFO        ----------
+2025-04-18 02:50:41,590 INFO        Epoch 101/300
+2025-04-18 02:52:24,113 INFO        epoch 101 average loss: 0.7633
+2025-04-18 02:52:24,113 INFO        ----------
+2025-04-18 02:52:24,113 INFO        Epoch 102/300
+2025-04-18 02:54:06,655 INFO        epoch 102 average loss: 0.7468
+2025-04-18 02:54:11,196 INFO        current epoch 102 current mean dice: 0.8838 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:54:11,197 INFO        ----------
+2025-04-18 02:54:11,197 INFO        Epoch 103/300
+2025-04-18 02:55:53,717 INFO        epoch 103 average loss: 0.7681
+2025-04-18 02:55:53,718 INFO        ----------
+2025-04-18 02:55:53,718 INFO        Epoch 104/300
+2025-04-18 02:57:36,156 INFO        epoch 104 average loss: 0.7660
+2025-04-18 02:57:40,713 INFO        current epoch 104 current mean dice: 0.8860 best mean dice: 0.8883 at epoch 80
+2025-04-18 02:57:40,713 INFO        ----------
+2025-04-18 02:57:40,714 INFO        Epoch 105/300
+2025-04-18 02:59:23,208 INFO        epoch 105 average loss: 0.7830
+2025-04-18 02:59:23,209 INFO        ----------
+2025-04-18 02:59:23,209 INFO        Epoch 106/300
+2025-04-18 03:01:05,735 INFO        epoch 106 average loss: 0.7528
+2025-04-18 03:01:10,230 INFO        saved new best metric model
+2025-04-18 03:01:10,230 INFO        current epoch 106 current mean dice: 0.8918 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:01:10,230 INFO        ----------
+2025-04-18 03:01:10,230 INFO        Epoch 107/300
+2025-04-18 03:02:52,646 INFO        epoch 107 average loss: 0.7598
+2025-04-18 03:02:52,646 INFO        ----------
+2025-04-18 03:02:52,646 INFO        Epoch 108/300
+2025-04-18 03:04:35,048 INFO        epoch 108 average loss: 0.7816
+2025-04-18 03:04:39,501 INFO        current epoch 108 current mean dice: 0.8803 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:04:39,502 INFO        ----------
+2025-04-18 03:04:39,502 INFO        Epoch 109/300
+2025-04-18 03:06:21,892 INFO        epoch 109 average loss: 0.7641
+2025-04-18 03:06:21,893 INFO        ----------
+2025-04-18 03:06:21,893 INFO        Epoch 110/300
+2025-04-18 03:08:04,457 INFO        epoch 110 average loss: 0.7652
+2025-04-18 03:08:08,901 INFO        current epoch 110 current mean dice: 0.8867 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:08:08,902 INFO        ----------
+2025-04-18 03:08:08,902 INFO        Epoch 111/300
+2025-04-18 03:09:51,365 INFO        epoch 111 average loss: 0.7525
+2025-04-18 03:09:51,365 INFO        ----------
+2025-04-18 03:09:51,365 INFO        Epoch 112/300
+2025-04-18 03:11:33,865 INFO        epoch 112 average loss: 0.7661
+2025-04-18 03:11:38,332 INFO        current epoch 112 current mean dice: 0.8903 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:11:38,332 INFO        ----------
+2025-04-18 03:11:38,332 INFO        Epoch 113/300
+2025-04-18 03:13:20,750 INFO        epoch 113 average loss: 0.7580
+2025-04-18 03:13:20,750 INFO        ----------
+2025-04-18 03:13:20,750 INFO        Epoch 114/300
+2025-04-18 03:15:03,354 INFO        epoch 114 average loss: 0.7697
+2025-04-18 03:15:07,907 INFO        current epoch 114 current mean dice: 0.8856 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:15:07,908 INFO        ----------
+2025-04-18 03:15:07,910 INFO        Epoch 115/300
+2025-04-18 03:16:50,428 INFO        epoch 115 average loss: 0.7768
+2025-04-18 03:16:50,428 INFO        ----------
+2025-04-18 03:16:50,428 INFO        Epoch 116/300
+2025-04-18 03:18:32,967 INFO        epoch 116 average loss: 0.7575
+2025-04-18 03:18:37,460 INFO        current epoch 116 current mean dice: 0.8874 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:18:37,460 INFO        ----------
+2025-04-18 03:18:37,460 INFO        Epoch 117/300
+2025-04-18 03:20:20,004 INFO        epoch 117 average loss: 0.7598
+2025-04-18 03:20:20,005 INFO        ----------
+2025-04-18 03:20:20,005 INFO        Epoch 118/300
+2025-04-18 03:22:02,656 INFO        epoch 118 average loss: 0.7637
+2025-04-18 03:22:07,106 INFO        current epoch 118 current mean dice: 0.8882 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:22:07,106 INFO        ----------
+2025-04-18 03:22:07,106 INFO        Epoch 119/300
+2025-04-18 03:23:49,501 INFO        epoch 119 average loss: 0.7691
+2025-04-18 03:23:49,501 INFO        ----------
+2025-04-18 03:23:49,501 INFO        Epoch 120/300
+2025-04-18 03:25:32,030 INFO        epoch 120 average loss: 0.7765
+2025-04-18 03:25:36,500 INFO        current epoch 120 current mean dice: 0.8817 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:25:36,500 INFO        ----------
+2025-04-18 03:25:36,500 INFO        Epoch 121/300
+2025-04-18 03:27:18,911 INFO        epoch 121 average loss: 0.7643
+2025-04-18 03:27:18,911 INFO        ----------
+2025-04-18 03:27:18,911 INFO        Epoch 122/300
+2025-04-18 03:29:01,373 INFO        epoch 122 average loss: 0.7550
+2025-04-18 03:29:05,815 INFO        current epoch 122 current mean dice: 0.8809 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:29:05,816 INFO        ----------
+2025-04-18 03:29:05,816 INFO        Epoch 123/300
+2025-04-18 03:30:48,142 INFO        epoch 123 average loss: 0.7620
+2025-04-18 03:30:48,142 INFO        ----------
+2025-04-18 03:30:48,142 INFO        Epoch 124/300
+2025-04-18 03:32:30,477 INFO        epoch 124 average loss: 0.7840
+2025-04-18 03:32:35,019 INFO        current epoch 124 current mean dice: 0.8654 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:32:35,019 INFO        ----------
+2025-04-18 03:32:35,019 INFO        Epoch 125/300
+2025-04-18 03:34:17,592 INFO        epoch 125 average loss: 0.7825
+2025-04-18 03:34:17,593 INFO        ----------
+2025-04-18 03:34:17,593 INFO        Epoch 126/300
+2025-04-18 03:36:00,062 INFO        epoch 126 average loss: 0.7483
+2025-04-18 03:36:04,519 INFO        current epoch 126 current mean dice: 0.8772 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:36:04,520 INFO        ----------
+2025-04-18 03:36:04,523 INFO        Epoch 127/300
+2025-04-18 03:37:47,233 INFO        epoch 127 average loss: 0.7662
+2025-04-18 03:37:47,233 INFO        ----------
+2025-04-18 03:37:47,233 INFO        Epoch 128/300
+2025-04-18 03:39:29,771 INFO        epoch 128 average loss: 0.7624
+2025-04-18 03:39:34,310 INFO        current epoch 128 current mean dice: 0.8851 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:39:34,310 INFO        ----------
+2025-04-18 03:39:34,310 INFO        Epoch 129/300
+2025-04-18 03:41:16,696 INFO        epoch 129 average loss: 0.7604
+2025-04-18 03:41:16,696 INFO        ----------
+2025-04-18 03:41:16,696 INFO        Epoch 130/300
+2025-04-18 03:42:59,118 INFO        epoch 130 average loss: 0.7557
+2025-04-18 03:43:03,652 INFO        current epoch 130 current mean dice: 0.8817 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:43:03,652 INFO        ----------
+2025-04-18 03:43:03,655 INFO        Epoch 131/300
+2025-04-18 03:44:46,262 INFO        epoch 131 average loss: 0.7488
+2025-04-18 03:44:46,262 INFO        ----------
+2025-04-18 03:44:46,262 INFO        Epoch 132/300
+2025-04-18 03:46:29,078 INFO        epoch 132 average loss: 0.7625
+2025-04-18 03:46:33,512 INFO        current epoch 132 current mean dice: 0.8882 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:46:33,512 INFO        ----------
+2025-04-18 03:46:33,512 INFO        Epoch 133/300
+2025-04-18 03:48:15,778 INFO        epoch 133 average loss: 0.7712
+2025-04-18 03:48:15,778 INFO        ----------
+2025-04-18 03:48:15,778 INFO        Epoch 134/300
+2025-04-18 03:49:58,171 INFO        epoch 134 average loss: 0.7543
+2025-04-18 03:50:02,628 INFO        current epoch 134 current mean dice: 0.8799 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:50:02,629 INFO        ----------
+2025-04-18 03:50:02,629 INFO        Epoch 135/300
+2025-04-18 03:51:45,231 INFO        epoch 135 average loss: 0.7569
+2025-04-18 03:51:45,231 INFO        ----------
+2025-04-18 03:51:45,231 INFO        Epoch 136/300
+2025-04-18 03:53:27,737 INFO        epoch 136 average loss: 0.7540
+2025-04-18 03:53:32,175 INFO        current epoch 136 current mean dice: 0.8852 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:53:32,176 INFO        ----------
+2025-04-18 03:53:32,176 INFO        Epoch 137/300
+2025-04-18 03:55:14,796 INFO        epoch 137 average loss: 0.7496
+2025-04-18 03:55:14,796 INFO        ----------
+2025-04-18 03:55:14,796 INFO        Epoch 138/300
+2025-04-18 03:56:57,332 INFO        epoch 138 average loss: 0.7502
+2025-04-18 03:57:01,779 INFO        current epoch 138 current mean dice: 0.8805 best mean dice: 0.8918 at epoch 106
+2025-04-18 03:57:01,779 INFO        ----------
+2025-04-18 03:57:01,779 INFO        Epoch 139/300
+2025-04-18 03:58:44,490 INFO        epoch 139 average loss: 0.7689
+2025-04-18 03:58:44,490 INFO        ----------
+2025-04-18 03:58:44,490 INFO        Epoch 140/300
+2025-04-18 04:00:26,969 INFO        epoch 140 average loss: 0.7827
+2025-04-18 04:00:31,451 INFO        current epoch 140 current mean dice: 0.8831 best mean dice: 0.8918 at epoch 106
+2025-04-18 04:00:31,452 INFO        ----------
+2025-04-18 04:00:31,471 INFO        Epoch 141/300
+2025-04-18 04:02:13,990 INFO        epoch 141 average loss: 0.7542
+2025-04-18 04:02:13,991 INFO        ----------
+2025-04-18 04:02:13,991 INFO        Epoch 142/300
+2025-04-18 04:03:56,516 INFO        epoch 142 average loss: 0.7418
+2025-04-18 04:04:01,044 INFO        current epoch 142 current mean dice: 0.8314 best mean dice: 0.8918 at epoch 106
+2025-04-18 04:04:01,045 INFO        ----------
+2025-04-18 04:04:01,045 INFO        Epoch 143/300
+2025-04-18 04:05:43,524 INFO        epoch 143 average loss: 0.7584
+2025-04-18 04:05:43,524 INFO        ----------
+2025-04-18 04:05:43,524 INFO        Epoch 144/300
+2025-04-18 04:07:26,155 INFO        epoch 144 average loss: 0.7620
+2025-04-18 04:07:30,682 INFO        current epoch 144 current mean dice: 0.8461 best mean dice: 0.8918 at epoch 106
+2025-04-18 04:07:30,683 INFO        ----------
+2025-04-18 04:07:30,687 INFO        Epoch 145/300
+2025-04-18 04:09:13,277 INFO        epoch 145 average loss: 0.7479
+2025-04-18 04:09:13,278 INFO        ----------
+2025-04-18 04:09:13,278 INFO        Epoch 146/300
+2025-04-18 04:10:55,800 INFO        epoch 146 average loss: 0.7763
+2025-04-18 04:11:00,324 INFO        current epoch 146 current mean dice: 0.8761 best mean dice: 0.8918 at epoch 106
+2025-04-18 04:11:00,324 INFO        ----------
+2025-04-18 04:11:00,324 INFO        Epoch 147/300
+2025-04-18 04:12:42,883 INFO        epoch 147 average loss: 0.7559
+2025-04-18 04:12:42,883 INFO        ----------
+2025-04-18 04:12:42,883 INFO        Epoch 148/300
+2025-04-18 04:14:25,341 INFO        epoch 148 average loss: 0.7642
+2025-04-18 04:14:29,777 INFO        current epoch 148 current mean dice: 0.8735 best mean dice: 0.8918 at epoch 106
+2025-04-18 04:14:29,778 INFO        ----------
+2025-04-18 04:14:29,778 INFO        Epoch 149/300
+2025-04-18 04:16:12,414 INFO        epoch 149 average loss: 0.7576
+2025-04-18 04:16:12,414 INFO        ----------
+2025-04-18 04:16:12,414 INFO        Epoch 150/300
+2025-04-18 04:17:54,854 INFO        epoch 150 average loss: 0.7413
+2025-04-18 04:17:59,304 INFO        current epoch 150 current mean dice: 0.8817 best mean dice: 0.8918 at epoch 106
+2025-04-18 04:17:59,305 INFO        ----------
+2025-04-18 04:17:59,305 INFO        Epoch 151/300
+2025-04-18 04:19:41,705 INFO        epoch 151 average loss: 0.7507
+2025-04-18 04:19:41,705 INFO        ----------
+2025-04-18 04:19:41,705 INFO        Epoch 152/300
+2025-04-18 04:21:24,205 INFO        epoch 152 average loss: 0.7643
+2025-04-18 04:21:28,667 INFO        current epoch 152 current mean dice: 0.8824 best mean dice: 0.8918 at epoch 106
+2025-04-18 04:21:28,667 INFO        ----------
+2025-04-18 04:21:28,667 INFO        Epoch 153/300
+2025-04-18 04:23:11,140 INFO        epoch 153 average loss: 0.7480
+2025-04-18 04:23:11,140 INFO        ----------
+2025-04-18 04:23:11,141 INFO        Epoch 154/300
+2025-04-18 04:24:53,698 INFO        epoch 154 average loss: 0.7428
+2025-04-18 04:24:58,170 INFO        saved new best metric model
+2025-04-18 04:24:58,170 INFO        current epoch 154 current mean dice: 0.8949 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:24:58,171 INFO        ----------
+2025-04-18 04:24:58,171 INFO        Epoch 155/300
+2025-04-18 04:26:40,622 INFO        epoch 155 average loss: 0.7583
+2025-04-18 04:26:40,623 INFO        ----------
+2025-04-18 04:26:40,623 INFO        Epoch 156/300
+2025-04-18 04:28:23,202 INFO        epoch 156 average loss: 0.7554
+2025-04-18 04:28:27,670 INFO        current epoch 156 current mean dice: 0.8804 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:28:27,670 INFO        ----------
+2025-04-18 04:28:27,670 INFO        Epoch 157/300
+2025-04-18 04:30:10,233 INFO        epoch 157 average loss: 0.7504
+2025-04-18 04:30:10,233 INFO        ----------
+2025-04-18 04:30:10,233 INFO        Epoch 158/300
+2025-04-18 04:31:52,758 INFO        epoch 158 average loss: 0.7397
+2025-04-18 04:31:57,219 INFO        current epoch 158 current mean dice: 0.8814 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:31:57,220 INFO        ----------
+2025-04-18 04:31:57,242 INFO        Epoch 159/300
+2025-04-18 04:33:39,748 INFO        epoch 159 average loss: 0.7512
+2025-04-18 04:33:39,748 INFO        ----------
+2025-04-18 04:33:39,749 INFO        Epoch 160/300
+2025-04-18 04:35:22,451 INFO        epoch 160 average loss: 0.7499
+2025-04-18 04:35:26,998 INFO        current epoch 160 current mean dice: 0.8928 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:35:26,999 INFO        ----------
+2025-04-18 04:35:27,001 INFO        Epoch 161/300
+2025-04-18 04:37:09,420 INFO        epoch 161 average loss: 0.7573
+2025-04-18 04:37:09,421 INFO        ----------
+2025-04-18 04:37:09,421 INFO        Epoch 162/300
+2025-04-18 04:38:51,988 INFO        epoch 162 average loss: 0.7575
+2025-04-18 04:38:56,533 INFO        current epoch 162 current mean dice: 0.8887 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:38:56,533 INFO        ----------
+2025-04-18 04:38:56,537 INFO        Epoch 163/300
+2025-04-18 04:40:39,104 INFO        epoch 163 average loss: 0.7618
+2025-04-18 04:40:39,104 INFO        ----------
+2025-04-18 04:40:39,104 INFO        Epoch 164/300
+2025-04-18 04:42:21,749 INFO        epoch 164 average loss: 0.7455
+2025-04-18 04:42:26,427 INFO        current epoch 164 current mean dice: 0.8908 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:42:26,428 INFO        ----------
+2025-04-18 04:42:26,431 INFO        Epoch 165/300
+2025-04-18 04:44:08,910 INFO        epoch 165 average loss: 0.7459
+2025-04-18 04:44:08,910 INFO        ----------
+2025-04-18 04:44:08,910 INFO        Epoch 166/300
+2025-04-18 04:45:51,378 INFO        epoch 166 average loss: 0.7666
+2025-04-18 04:45:55,913 INFO        current epoch 166 current mean dice: 0.8855 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:45:55,914 INFO        ----------
+2025-04-18 04:45:55,914 INFO        Epoch 167/300
+2025-04-18 04:47:38,409 INFO        epoch 167 average loss: 0.7441
+2025-04-18 04:47:38,409 INFO        ----------
+2025-04-18 04:47:38,409 INFO        Epoch 168/300
+2025-04-18 04:49:20,992 INFO        epoch 168 average loss: 0.7421
+2025-04-18 04:49:25,464 INFO        current epoch 168 current mean dice: 0.8887 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:49:25,464 INFO        ----------
+2025-04-18 04:49:25,464 INFO        Epoch 169/300
+2025-04-18 04:51:07,878 INFO        epoch 169 average loss: 0.7500
+2025-04-18 04:51:07,879 INFO        ----------
+2025-04-18 04:51:07,879 INFO        Epoch 170/300
+2025-04-18 04:52:50,399 INFO        epoch 170 average loss: 0.7586
+2025-04-18 04:52:54,850 INFO        current epoch 170 current mean dice: 0.8907 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:52:54,851 INFO        ----------
+2025-04-18 04:52:54,851 INFO        Epoch 171/300
+2025-04-18 04:54:37,387 INFO        epoch 171 average loss: 0.7476
+2025-04-18 04:54:37,387 INFO        ----------
+2025-04-18 04:54:37,387 INFO        Epoch 172/300
+2025-04-18 04:56:19,811 INFO        epoch 172 average loss: 0.7443
+2025-04-18 04:56:24,259 INFO        current epoch 172 current mean dice: 0.8798 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:56:24,260 INFO        ----------
+2025-04-18 04:56:24,260 INFO        Epoch 173/300
+2025-04-18 04:58:06,955 INFO        epoch 173 average loss: 0.7386
+2025-04-18 04:58:06,955 INFO        ----------
+2025-04-18 04:58:06,955 INFO        Epoch 174/300
+2025-04-18 04:59:49,363 INFO        epoch 174 average loss: 0.7461
+2025-04-18 04:59:53,807 INFO        current epoch 174 current mean dice: 0.8903 best mean dice: 0.8949 at epoch 154
+2025-04-18 04:59:53,807 INFO        ----------
+2025-04-18 04:59:53,808 INFO        Epoch 175/300
+2025-04-18 05:01:36,359 INFO        epoch 175 average loss: 0.7538
+2025-04-18 05:01:36,359 INFO        ----------
+2025-04-18 05:01:36,360 INFO        Epoch 176/300
+2025-04-18 05:03:18,687 INFO        epoch 176 average loss: 0.7389
+2025-04-18 05:03:23,193 INFO        current epoch 176 current mean dice: 0.8788 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:03:23,193 INFO        ----------
+2025-04-18 05:03:23,196 INFO        Epoch 177/300
+2025-04-18 05:05:05,717 INFO        epoch 177 average loss: 0.7458
+2025-04-18 05:05:05,717 INFO        ----------
+2025-04-18 05:05:05,717 INFO        Epoch 178/300
+2025-04-18 05:06:48,287 INFO        epoch 178 average loss: 0.7415
+2025-04-18 05:06:52,813 INFO        current epoch 178 current mean dice: 0.8871 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:06:52,814 INFO        ----------
+2025-04-18 05:06:52,814 INFO        Epoch 179/300
+2025-04-18 05:08:35,304 INFO        epoch 179 average loss: 0.7447
+2025-04-18 05:08:35,305 INFO        ----------
+2025-04-18 05:08:35,305 INFO        Epoch 180/300
+2025-04-18 05:10:17,891 INFO        epoch 180 average loss: 0.7642
+2025-04-18 05:10:22,509 INFO        current epoch 180 current mean dice: 0.8283 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:10:22,509 INFO        ----------
+2025-04-18 05:10:22,513 INFO        Epoch 181/300
+2025-04-18 05:12:05,312 INFO        epoch 181 average loss: 0.7520
+2025-04-18 05:12:05,312 INFO        ----------
+2025-04-18 05:12:05,312 INFO        Epoch 182/300
+2025-04-18 05:13:47,831 INFO        epoch 182 average loss: 0.7414
+2025-04-18 05:13:52,345 INFO        current epoch 182 current mean dice: 0.8902 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:13:52,345 INFO        ----------
+2025-04-18 05:13:52,345 INFO        Epoch 183/300
+2025-04-18 05:15:34,945 INFO        epoch 183 average loss: 0.7582
+2025-04-18 05:15:34,945 INFO        ----------
+2025-04-18 05:15:34,945 INFO        Epoch 184/300
+2025-04-18 05:17:17,296 INFO        epoch 184 average loss: 0.7477
+2025-04-18 05:17:21,726 INFO        current epoch 184 current mean dice: 0.8760 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:17:21,727 INFO        ----------
+2025-04-18 05:17:21,727 INFO        Epoch 185/300
+2025-04-18 05:19:04,316 INFO        epoch 185 average loss: 0.7467
+2025-04-18 05:19:04,316 INFO        ----------
+2025-04-18 05:19:04,316 INFO        Epoch 186/300
+2025-04-18 05:20:46,772 INFO        epoch 186 average loss: 0.7510
+2025-04-18 05:20:51,240 INFO        current epoch 186 current mean dice: 0.8891 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:20:51,240 INFO        ----------
+2025-04-18 05:20:51,240 INFO        Epoch 187/300
+2025-04-18 05:22:33,714 INFO        epoch 187 average loss: 0.7458
+2025-04-18 05:22:33,714 INFO        ----------
+2025-04-18 05:22:33,714 INFO        Epoch 188/300
+2025-04-18 05:24:16,117 INFO        epoch 188 average loss: 0.7613
+2025-04-18 05:24:20,593 INFO        current epoch 188 current mean dice: 0.8908 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:24:20,594 INFO        ----------
+2025-04-18 05:24:20,594 INFO        Epoch 189/300
+2025-04-18 05:26:03,173 INFO        epoch 189 average loss: 0.7492
+2025-04-18 05:26:03,173 INFO        ----------
+2025-04-18 05:26:03,173 INFO        Epoch 190/300
+2025-04-18 05:27:45,518 INFO        epoch 190 average loss: 0.7385
+2025-04-18 05:27:49,958 INFO        current epoch 190 current mean dice: 0.8819 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:27:49,958 INFO        ----------
+2025-04-18 05:27:49,958 INFO        Epoch 191/300
+2025-04-18 05:29:32,378 INFO        epoch 191 average loss: 0.7495
+2025-04-18 05:29:32,378 INFO        ----------
+2025-04-18 05:29:32,378 INFO        Epoch 192/300
+2025-04-18 05:31:14,883 INFO        epoch 192 average loss: 0.7659
+2025-04-18 05:31:19,432 INFO        current epoch 192 current mean dice: 0.8833 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:31:19,433 INFO        ----------
+2025-04-18 05:31:19,433 INFO        Epoch 193/300
+2025-04-18 05:33:02,048 INFO        epoch 193 average loss: 0.7536
+2025-04-18 05:33:02,048 INFO        ----------
+2025-04-18 05:33:02,048 INFO        Epoch 194/300
+2025-04-18 05:34:44,468 INFO        epoch 194 average loss: 0.7571
+2025-04-18 05:34:48,936 INFO        current epoch 194 current mean dice: 0.8851 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:34:48,936 INFO        ----------
+2025-04-18 05:34:48,936 INFO        Epoch 195/300
+2025-04-18 05:36:31,417 INFO        epoch 195 average loss: 0.7559
+2025-04-18 05:36:31,417 INFO        ----------
+2025-04-18 05:36:31,417 INFO        Epoch 196/300
+2025-04-18 05:38:14,042 INFO        epoch 196 average loss: 0.7538
+2025-04-18 05:38:18,612 INFO        current epoch 196 current mean dice: 0.8798 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:38:18,613 INFO        ----------
+2025-04-18 05:38:18,616 INFO        Epoch 197/300
+2025-04-18 05:40:01,171 INFO        epoch 197 average loss: 0.7377
+2025-04-18 05:40:01,171 INFO        ----------
+2025-04-18 05:40:01,171 INFO        Epoch 198/300
+2025-04-18 05:41:43,605 INFO        epoch 198 average loss: 0.7494
+2025-04-18 05:41:48,075 INFO        current epoch 198 current mean dice: 0.8875 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:41:48,075 INFO        ----------
+2025-04-18 05:41:48,078 INFO        Epoch 199/300
+2025-04-18 05:43:30,689 INFO        epoch 199 average loss: 0.7491
+2025-04-18 05:43:30,690 INFO        ----------
+2025-04-18 05:43:30,690 INFO        Epoch 200/300
+2025-04-18 05:45:13,080 INFO        epoch 200 average loss: 0.7429
+2025-04-18 05:45:17,634 INFO        current epoch 200 current mean dice: 0.8897 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:45:17,634 INFO        Dividing learning rate by 2.0. New learning rate is: lr = 2.5e-05
+2025-04-18 05:45:17,634 INFO        ----------
+2025-04-18 05:45:17,634 INFO        Epoch 201/300
+2025-04-18 05:47:00,111 INFO        epoch 201 average loss: 0.7490
+2025-04-18 05:47:00,111 INFO        ----------
+2025-04-18 05:47:00,111 INFO        Epoch 202/300
+2025-04-18 05:48:42,872 INFO        epoch 202 average loss: 0.7584
+2025-04-18 05:48:47,424 INFO        current epoch 202 current mean dice: 0.8921 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:48:47,424 INFO        ----------
+2025-04-18 05:48:47,428 INFO        Epoch 203/300
+2025-04-18 05:50:29,938 INFO        epoch 203 average loss: 0.7431
+2025-04-18 05:50:29,938 INFO        ----------
+2025-04-18 05:50:29,938 INFO        Epoch 204/300
+2025-04-18 05:52:12,446 INFO        epoch 204 average loss: 0.7493
+2025-04-18 05:52:16,937 INFO        current epoch 204 current mean dice: 0.8890 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:52:16,938 INFO        ----------
+2025-04-18 05:52:16,938 INFO        Epoch 205/300
+2025-04-18 05:53:59,410 INFO        epoch 205 average loss: 0.7417
+2025-04-18 05:53:59,410 INFO        ----------
+2025-04-18 05:53:59,410 INFO        Epoch 206/300
+2025-04-18 05:55:42,015 INFO        epoch 206 average loss: 0.7446
+2025-04-18 05:55:46,473 INFO        current epoch 206 current mean dice: 0.8924 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:55:46,473 INFO        ----------
+2025-04-18 05:55:46,474 INFO        Epoch 207/300
+2025-04-18 05:57:28,957 INFO        epoch 207 average loss: 0.7379
+2025-04-18 05:57:28,958 INFO        ----------
+2025-04-18 05:57:28,958 INFO        Epoch 208/300
+2025-04-18 05:59:11,457 INFO        epoch 208 average loss: 0.7598
+2025-04-18 05:59:15,912 INFO        current epoch 208 current mean dice: 0.8899 best mean dice: 0.8949 at epoch 154
+2025-04-18 05:59:15,913 INFO        ----------
+2025-04-18 05:59:15,913 INFO        Epoch 209/300
+2025-04-18 06:00:58,375 INFO        epoch 209 average loss: 0.7541
+2025-04-18 06:00:58,376 INFO        ----------
+2025-04-18 06:00:58,376 INFO        Epoch 210/300
+2025-04-18 06:02:41,045 INFO        epoch 210 average loss: 0.7345
+2025-04-18 06:02:45,481 INFO        current epoch 210 current mean dice: 0.8868 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:02:45,482 INFO        ----------
+2025-04-18 06:02:45,482 INFO        Epoch 211/300
+2025-04-18 06:04:28,001 INFO        epoch 211 average loss: 0.7431
+2025-04-18 06:04:28,001 INFO        ----------
+2025-04-18 06:04:28,001 INFO        Epoch 212/300
+2025-04-18 06:06:10,457 INFO        epoch 212 average loss: 0.7408
+2025-04-18 06:06:14,934 INFO        current epoch 212 current mean dice: 0.8904 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:06:14,934 INFO        ----------
+2025-04-18 06:06:14,934 INFO        Epoch 213/300
+2025-04-18 06:07:57,463 INFO        epoch 213 average loss: 0.7349
+2025-04-18 06:07:57,463 INFO        ----------
+2025-04-18 06:07:57,463 INFO        Epoch 214/300
+2025-04-18 06:09:39,968 INFO        epoch 214 average loss: 0.7438
+2025-04-18 06:09:44,495 INFO        current epoch 214 current mean dice: 0.8916 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:09:44,495 INFO        ----------
+2025-04-18 06:09:44,498 INFO        Epoch 215/300
+2025-04-18 06:11:26,897 INFO        epoch 215 average loss: 0.7458
+2025-04-18 06:11:26,898 INFO        ----------
+2025-04-18 06:11:26,898 INFO        Epoch 216/300
+2025-04-18 06:13:09,414 INFO        epoch 216 average loss: 0.7516
+2025-04-18 06:13:14,034 INFO        current epoch 216 current mean dice: 0.8912 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:13:14,035 INFO        ----------
+2025-04-18 06:13:14,038 INFO        Epoch 217/300
+2025-04-18 06:14:56,705 INFO        epoch 217 average loss: 0.7404
+2025-04-18 06:14:56,705 INFO        ----------
+2025-04-18 06:14:56,705 INFO        Epoch 218/300
+2025-04-18 06:16:39,150 INFO        epoch 218 average loss: 0.7433
+2025-04-18 06:16:43,720 INFO        current epoch 218 current mean dice: 0.8920 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:16:43,721 INFO        ----------
+2025-04-18 06:16:43,721 INFO        Epoch 219/300
+2025-04-18 06:18:26,359 INFO        epoch 219 average loss: 0.7539
+2025-04-18 06:18:26,359 INFO        ----------
+2025-04-18 06:18:26,359 INFO        Epoch 220/300
+2025-04-18 06:20:08,768 INFO        epoch 220 average loss: 0.7485
+2025-04-18 06:20:13,208 INFO        current epoch 220 current mean dice: 0.8883 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:20:13,208 INFO        ----------
+2025-04-18 06:20:13,209 INFO        Epoch 221/300
+2025-04-18 06:21:55,646 INFO        epoch 221 average loss: 0.7441
+2025-04-18 06:21:55,646 INFO        ----------
+2025-04-18 06:21:55,646 INFO        Epoch 222/300
+2025-04-18 06:23:38,095 INFO        epoch 222 average loss: 0.7465
+2025-04-18 06:23:42,612 INFO        current epoch 222 current mean dice: 0.8854 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:23:42,612 INFO        ----------
+2025-04-18 06:23:42,612 INFO        Epoch 223/300
+2025-04-18 06:25:25,191 INFO        epoch 223 average loss: 0.7445
+2025-04-18 06:25:25,191 INFO        ----------
+2025-04-18 06:25:25,191 INFO        Epoch 224/300
+2025-04-18 06:27:07,651 INFO        epoch 224 average loss: 0.7485
+2025-04-18 06:27:12,125 INFO        current epoch 224 current mean dice: 0.8856 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:27:12,125 INFO        ----------
+2025-04-18 06:27:12,125 INFO        Epoch 225/300
+2025-04-18 06:28:54,498 INFO        epoch 225 average loss: 0.7388
+2025-04-18 06:28:54,499 INFO        ----------
+2025-04-18 06:28:54,499 INFO        Epoch 226/300
+2025-04-18 06:30:37,021 INFO        epoch 226 average loss: 0.7410
+2025-04-18 06:30:41,499 INFO        current epoch 226 current mean dice: 0.8904 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:30:41,500 INFO        ----------
+2025-04-18 06:30:41,500 INFO        Epoch 227/300
+2025-04-18 06:32:23,985 INFO        epoch 227 average loss: 0.7443
+2025-04-18 06:32:23,986 INFO        ----------
+2025-04-18 06:32:23,986 INFO        Epoch 228/300
+2025-04-18 06:34:06,480 INFO        epoch 228 average loss: 0.7557
+2025-04-18 06:34:10,951 INFO        current epoch 228 current mean dice: 0.8920 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:34:10,951 INFO        ----------
+2025-04-18 06:34:10,954 INFO        Epoch 229/300
+2025-04-18 06:35:53,412 INFO        epoch 229 average loss: 0.7282
+2025-04-18 06:35:53,412 INFO        ----------
+2025-04-18 06:35:53,412 INFO        Epoch 230/300
+2025-04-18 06:37:35,901 INFO        epoch 230 average loss: 0.7388
+2025-04-18 06:37:40,539 INFO        current epoch 230 current mean dice: 0.8909 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:37:40,540 INFO        ----------
+2025-04-18 06:37:40,543 INFO        Epoch 231/300
+2025-04-18 06:39:23,123 INFO        epoch 231 average loss: 0.7475
+2025-04-18 06:39:23,124 INFO        ----------
+2025-04-18 06:39:23,124 INFO        Epoch 232/300
+2025-04-18 06:41:05,632 INFO        epoch 232 average loss: 0.7425
+2025-04-18 06:41:10,223 INFO        current epoch 232 current mean dice: 0.8883 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:41:10,224 INFO        ----------
+2025-04-18 06:41:10,227 INFO        Epoch 233/300
+2025-04-18 06:42:52,837 INFO        epoch 233 average loss: 0.7423
+2025-04-18 06:42:52,837 INFO        ----------
+2025-04-18 06:42:52,837 INFO        Epoch 234/300
+2025-04-18 06:44:35,357 INFO        epoch 234 average loss: 0.7409
+2025-04-18 06:44:39,876 INFO        current epoch 234 current mean dice: 0.8938 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:44:39,876 INFO        ----------
+2025-04-18 06:44:39,876 INFO        Epoch 235/300
+2025-04-18 06:46:22,355 INFO        epoch 235 average loss: 0.7460
+2025-04-18 06:46:22,355 INFO        ----------
+2025-04-18 06:46:22,355 INFO        Epoch 236/300
+2025-04-18 06:48:04,845 INFO        epoch 236 average loss: 0.7378
+2025-04-18 06:48:09,389 INFO        current epoch 236 current mean dice: 0.8893 best mean dice: 0.8949 at epoch 154
+2025-04-18 06:48:09,390 INFO        ----------
+2025-04-18 06:48:09,390 INFO        Epoch 237/300
+2025-04-18 06:49:51,902 INFO        epoch 237 average loss: 0.7566
+2025-04-18 06:49:51,902 INFO        ----------
+2025-04-18 06:49:51,902 INFO        Epoch 238/300
+2025-04-18 06:51:34,346 INFO        epoch 238 average loss: 0.7332
+2025-04-18 06:51:38,915 INFO        saved new best metric model
+2025-04-18 06:51:38,915 INFO        current epoch 238 current mean dice: 0.8963 best mean dice: 0.8963 at epoch 238
+2025-04-18 06:51:38,915 INFO        ----------
+2025-04-18 06:51:38,915 INFO        Epoch 239/300
+2025-04-18 06:53:21,462 INFO        epoch 239 average loss: 0.7486
+2025-04-18 06:53:21,462 INFO        ----------
+2025-04-18 06:53:21,462 INFO        Epoch 240/300
+2025-04-18 06:55:03,957 INFO        epoch 240 average loss: 0.7285
+2025-04-18 06:55:08,403 INFO        current epoch 240 current mean dice: 0.8953 best mean dice: 0.8963 at epoch 238
+2025-04-18 06:55:08,403 INFO        ----------
+2025-04-18 06:55:08,403 INFO        Epoch 241/300
+2025-04-18 06:56:50,777 INFO        epoch 241 average loss: 0.7371
+2025-04-18 06:56:50,777 INFO        ----------
+2025-04-18 06:56:50,777 INFO        Epoch 242/300
+2025-04-18 06:58:33,339 INFO        epoch 242 average loss: 0.7490
+2025-04-18 06:58:37,875 INFO        current epoch 242 current mean dice: 0.8936 best mean dice: 0.8963 at epoch 238
+2025-04-18 06:58:37,875 INFO        ----------
+2025-04-18 06:58:37,876 INFO        Epoch 243/300
+2025-04-18 07:00:20,536 INFO        epoch 243 average loss: 0.7424
+2025-04-18 07:00:20,537 INFO        ----------
+2025-04-18 07:00:20,537 INFO        Epoch 244/300
+2025-04-18 07:02:03,109 INFO        epoch 244 average loss: 0.7343
+2025-04-18 07:02:07,589 INFO        current epoch 244 current mean dice: 0.8942 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:02:07,589 INFO        ----------
+2025-04-18 07:02:07,589 INFO        Epoch 245/300
+2025-04-18 07:03:50,011 INFO        epoch 245 average loss: 0.7332
+2025-04-18 07:03:50,011 INFO        ----------
+2025-04-18 07:03:50,011 INFO        Epoch 246/300
+2025-04-18 07:05:32,504 INFO        epoch 246 average loss: 0.7451
+2025-04-18 07:05:37,076 INFO        current epoch 246 current mean dice: 0.8912 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:05:37,077 INFO        ----------
+2025-04-18 07:05:37,080 INFO        Epoch 247/300
+2025-04-18 07:07:19,706 INFO        epoch 247 average loss: 0.7343
+2025-04-18 07:07:19,706 INFO        ----------
+2025-04-18 07:07:19,706 INFO        Epoch 248/300
+2025-04-18 07:09:02,405 INFO        epoch 248 average loss: 0.7333
+2025-04-18 07:09:07,000 INFO        current epoch 248 current mean dice: 0.8927 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:09:07,000 INFO        ----------
+2025-04-18 07:09:07,000 INFO        Epoch 249/300
+2025-04-18 07:10:49,497 INFO        epoch 249 average loss: 0.7323
+2025-04-18 07:10:49,497 INFO        ----------
+2025-04-18 07:10:49,497 INFO        Epoch 250/300
+2025-04-18 07:12:32,046 INFO        epoch 250 average loss: 0.7366
+2025-04-18 07:12:36,513 INFO        current epoch 250 current mean dice: 0.8939 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:12:36,514 INFO        ----------
+2025-04-18 07:12:36,514 INFO        Epoch 251/300
+2025-04-18 07:14:18,925 INFO        epoch 251 average loss: 0.7384
+2025-04-18 07:14:18,925 INFO        ----------
+2025-04-18 07:14:18,925 INFO        Epoch 252/300
+2025-04-18 07:16:01,414 INFO        epoch 252 average loss: 0.7456
+2025-04-18 07:16:05,871 INFO        current epoch 252 current mean dice: 0.8901 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:16:05,872 INFO        ----------
+2025-04-18 07:16:05,872 INFO        Epoch 253/300
+2025-04-18 07:17:48,229 INFO        epoch 253 average loss: 0.7483
+2025-04-18 07:17:48,230 INFO        ----------
+2025-04-18 07:17:48,230 INFO        Epoch 254/300
+2025-04-18 07:19:30,754 INFO        epoch 254 average loss: 0.7580
+2025-04-18 07:19:35,206 INFO        current epoch 254 current mean dice: 0.8891 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:19:35,207 INFO        ----------
+2025-04-18 07:19:35,207 INFO        Epoch 255/300
+2025-04-18 07:21:17,705 INFO        epoch 255 average loss: 0.7450
+2025-04-18 07:21:17,705 INFO        ----------
+2025-04-18 07:21:17,705 INFO        Epoch 256/300
+2025-04-18 07:23:00,225 INFO        epoch 256 average loss: 0.7377
+2025-04-18 07:23:04,679 INFO        current epoch 256 current mean dice: 0.8894 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:23:04,679 INFO        ----------
+2025-04-18 07:23:04,679 INFO        Epoch 257/300
+2025-04-18 07:24:47,285 INFO        epoch 257 average loss: 0.7352
+2025-04-18 07:24:47,286 INFO        ----------
+2025-04-18 07:24:47,286 INFO        Epoch 258/300
+2025-04-18 07:26:29,844 INFO        epoch 258 average loss: 0.7483
+2025-04-18 07:26:34,310 INFO        current epoch 258 current mean dice: 0.8925 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:26:34,311 INFO        ----------
+2025-04-18 07:26:34,311 INFO        Epoch 259/300
+2025-04-18 07:28:16,797 INFO        epoch 259 average loss: 0.7449
+2025-04-18 07:28:16,797 INFO        ----------
+2025-04-18 07:28:16,797 INFO        Epoch 260/300
+2025-04-18 07:29:59,404 INFO        epoch 260 average loss: 0.7445
+2025-04-18 07:30:03,964 INFO        current epoch 260 current mean dice: 0.8905 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:30:03,964 INFO        ----------
+2025-04-18 07:30:03,967 INFO        Epoch 261/300
+2025-04-18 07:31:46,554 INFO        epoch 261 average loss: 0.7421
+2025-04-18 07:31:46,554 INFO        ----------
+2025-04-18 07:31:46,554 INFO        Epoch 262/300
+2025-04-18 07:33:29,227 INFO        epoch 262 average loss: 0.7223
+2025-04-18 07:33:33,726 INFO        current epoch 262 current mean dice: 0.8930 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:33:33,726 INFO        ----------
+2025-04-18 07:33:33,729 INFO        Epoch 263/300
+2025-04-18 07:35:16,353 INFO        epoch 263 average loss: 0.7440
+2025-04-18 07:35:16,353 INFO        ----------
+2025-04-18 07:35:16,353 INFO        Epoch 264/300
+2025-04-18 07:36:58,984 INFO        epoch 264 average loss: 0.7306
+2025-04-18 07:37:03,546 INFO        current epoch 264 current mean dice: 0.8937 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:37:03,546 INFO        ----------
+2025-04-18 07:37:03,550 INFO        Epoch 265/300
+2025-04-18 07:38:46,074 INFO        epoch 265 average loss: 0.7403
+2025-04-18 07:38:46,074 INFO        ----------
+2025-04-18 07:38:46,074 INFO        Epoch 266/300
+2025-04-18 07:40:28,468 INFO        epoch 266 average loss: 0.7419
+2025-04-18 07:40:32,899 INFO        current epoch 266 current mean dice: 0.8913 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:40:32,900 INFO        ----------
+2025-04-18 07:40:32,900 INFO        Epoch 267/300
+2025-04-18 07:42:15,294 INFO        epoch 267 average loss: 0.7413
+2025-04-18 07:42:15,294 INFO        ----------
+2025-04-18 07:42:15,294 INFO        Epoch 268/300
+2025-04-18 07:43:57,739 INFO        epoch 268 average loss: 0.7336
+2025-04-18 07:44:02,226 INFO        current epoch 268 current mean dice: 0.8837 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:44:02,227 INFO        ----------
+2025-04-18 07:44:02,245 INFO        Epoch 269/300
+2025-04-18 07:45:44,733 INFO        epoch 269 average loss: 0.7497
+2025-04-18 07:45:44,733 INFO        ----------
+2025-04-18 07:45:44,733 INFO        Epoch 270/300
+2025-04-18 07:47:27,155 INFO        epoch 270 average loss: 0.7390
+2025-04-18 07:47:31,592 INFO        current epoch 270 current mean dice: 0.8844 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:47:31,592 INFO        ----------
+2025-04-18 07:47:31,592 INFO        Epoch 271/300
+2025-04-18 07:49:14,081 INFO        epoch 271 average loss: 0.7411
+2025-04-18 07:49:14,081 INFO        ----------
+2025-04-18 07:49:14,081 INFO        Epoch 272/300
+2025-04-18 07:50:56,544 INFO        epoch 272 average loss: 0.7488
+2025-04-18 07:51:00,979 INFO        current epoch 272 current mean dice: 0.8891 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:51:00,980 INFO        ----------
+2025-04-18 07:51:00,980 INFO        Epoch 273/300
+2025-04-18 07:52:43,567 INFO        epoch 273 average loss: 0.7513
+2025-04-18 07:52:43,567 INFO        ----------
+2025-04-18 07:52:43,567 INFO        Epoch 274/300
+2025-04-18 07:54:26,041 INFO        epoch 274 average loss: 0.7292
+2025-04-18 07:54:30,583 INFO        current epoch 274 current mean dice: 0.8920 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:54:30,583 INFO        ----------
+2025-04-18 07:54:30,583 INFO        Epoch 275/300
+2025-04-18 07:56:13,224 INFO        epoch 275 average loss: 0.7406
+2025-04-18 07:56:13,225 INFO        ----------
+2025-04-18 07:56:13,225 INFO        Epoch 276/300
+2025-04-18 07:57:55,799 INFO        epoch 276 average loss: 0.7418
+2025-04-18 07:58:00,337 INFO        current epoch 276 current mean dice: 0.8932 best mean dice: 0.8963 at epoch 238
+2025-04-18 07:58:00,337 INFO        ----------
+2025-04-18 07:58:00,337 INFO        Epoch 277/300
+2025-04-18 07:59:42,965 INFO        epoch 277 average loss: 0.7500
+2025-04-18 07:59:42,965 INFO        ----------
+2025-04-18 07:59:42,965 INFO        Epoch 278/300
+2025-04-18 08:01:25,357 INFO        epoch 278 average loss: 0.7404
+2025-04-18 08:01:29,825 INFO        current epoch 278 current mean dice: 0.8413 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:01:29,825 INFO        ----------
+2025-04-18 08:01:29,825 INFO        Epoch 279/300
+2025-04-18 08:03:12,366 INFO        epoch 279 average loss: 0.7375
+2025-04-18 08:03:12,367 INFO        ----------
+2025-04-18 08:03:12,367 INFO        Epoch 280/300
+2025-04-18 08:04:54,946 INFO        epoch 280 average loss: 0.7337
+2025-04-18 08:04:59,742 INFO        current epoch 280 current mean dice: 0.8929 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:04:59,743 INFO        ----------
+2025-04-18 08:04:59,746 INFO        Epoch 281/300
+2025-04-18 08:06:42,264 INFO        epoch 281 average loss: 0.7392
+2025-04-18 08:06:42,265 INFO        ----------
+2025-04-18 08:06:42,265 INFO        Epoch 282/300
+2025-04-18 08:08:24,654 INFO        epoch 282 average loss: 0.7362
+2025-04-18 08:08:29,095 INFO        current epoch 282 current mean dice: 0.8909 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:08:29,096 INFO        ----------
+2025-04-18 08:08:29,096 INFO        Epoch 283/300
+2025-04-18 08:10:11,610 INFO        epoch 283 average loss: 0.7478
+2025-04-18 08:10:11,611 INFO        ----------
+2025-04-18 08:10:11,611 INFO        Epoch 284/300
+2025-04-18 08:11:54,075 INFO        epoch 284 average loss: 0.7314
+2025-04-18 08:11:58,514 INFO        current epoch 284 current mean dice: 0.8925 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:11:58,515 INFO        ----------
+2025-04-18 08:11:58,515 INFO        Epoch 285/300
+2025-04-18 08:13:41,131 INFO        epoch 285 average loss: 0.7252
+2025-04-18 08:13:41,131 INFO        ----------
+2025-04-18 08:13:41,131 INFO        Epoch 286/300
+2025-04-18 08:15:23,576 INFO        epoch 286 average loss: 0.7410
+2025-04-18 08:15:28,064 INFO        current epoch 286 current mean dice: 0.8931 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:15:28,064 INFO        ----------
+2025-04-18 08:15:28,064 INFO        Epoch 287/300
+2025-04-18 08:17:10,702 INFO        epoch 287 average loss: 0.7512
+2025-04-18 08:17:10,702 INFO        ----------
+2025-04-18 08:17:10,702 INFO        Epoch 288/300
+2025-04-18 08:18:53,211 INFO        epoch 288 average loss: 0.7415
+2025-04-18 08:18:57,673 INFO        current epoch 288 current mean dice: 0.8832 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:18:57,673 INFO        ----------
+2025-04-18 08:18:57,673 INFO        Epoch 289/300
+2025-04-18 08:20:40,316 INFO        epoch 289 average loss: 0.7268
+2025-04-18 08:20:40,316 INFO        ----------
+2025-04-18 08:20:40,316 INFO        Epoch 290/300
+2025-04-18 08:22:22,718 INFO        epoch 290 average loss: 0.7428
+2025-04-18 08:22:27,219 INFO        current epoch 290 current mean dice: 0.8852 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:22:27,220 INFO        ----------
+2025-04-18 08:22:27,220 INFO        Epoch 291/300
+2025-04-18 08:24:09,658 INFO        epoch 291 average loss: 0.7490
+2025-04-18 08:24:09,659 INFO        ----------
+2025-04-18 08:24:09,659 INFO        Epoch 292/300
+2025-04-18 08:25:52,042 INFO        epoch 292 average loss: 0.7445
+2025-04-18 08:25:56,545 INFO        current epoch 292 current mean dice: 0.8912 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:25:56,545 INFO        ----------
+2025-04-18 08:25:56,549 INFO        Epoch 293/300
+2025-04-18 08:27:39,107 INFO        epoch 293 average loss: 0.7435
+2025-04-18 08:27:39,108 INFO        ----------
+2025-04-18 08:27:39,108 INFO        Epoch 294/300
+2025-04-18 08:29:21,541 INFO        epoch 294 average loss: 0.7376
+2025-04-18 08:29:26,178 INFO        current epoch 294 current mean dice: 0.8900 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:29:26,178 INFO        ----------
+2025-04-18 08:29:26,178 INFO        Epoch 295/300
+2025-04-18 08:31:08,725 INFO        epoch 295 average loss: 0.7572
+2025-04-18 08:31:08,726 INFO        ----------
+2025-04-18 08:31:08,726 INFO        Epoch 296/300
+2025-04-18 08:32:51,272 INFO        epoch 296 average loss: 0.7496
+2025-04-18 08:32:55,847 INFO        current epoch 296 current mean dice: 0.8920 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:32:55,847 INFO        ----------
+2025-04-18 08:32:55,851 INFO        Epoch 297/300
+2025-04-18 08:34:38,205 INFO        epoch 297 average loss: 0.7421
+2025-04-18 08:34:38,206 INFO        ----------
+2025-04-18 08:34:38,206 INFO        Epoch 298/300
+2025-04-18 08:36:20,785 INFO        epoch 298 average loss: 0.7375
+2025-04-18 08:36:25,248 INFO        current epoch 298 current mean dice: 0.8919 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:36:25,248 INFO        ----------
+2025-04-18 08:36:25,249 INFO        Epoch 299/300
+2025-04-18 08:38:07,731 INFO        epoch 299 average loss: 0.7407
+2025-04-18 08:38:07,732 INFO        ----------
+2025-04-18 08:38:07,732 INFO        Epoch 300/300
+2025-04-18 08:39:50,172 INFO        epoch 300 average loss: 0.7429
+2025-04-18 08:39:54,707 INFO        current epoch 300 current mean dice: 0.8951 best mean dice: 0.8963 at epoch 238
+2025-04-18 08:39:54,707 INFO        Dividing learning rate by 2.0. New learning rate is: lr = 1.25e-05
+2025-04-18 08:39:54,708 INFO        Train completed, best_metric: 0.8963  at epoch: 238
+2025-04-18 08:39:54,741 INFO        Saved model of the last epoch at: ./data/VS_defaced/results/output/model/last_epoch_model.pth
