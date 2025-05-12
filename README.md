@@ -1,6 +1,3 @@
-### 🧬 Vestibular Schwannoma Segmentation
-
-```markdown
 # Vestibular Schwannoma Segmentation
 
 An ML pipeline for automatic segmentation of vestibular schwannomas (VS) from 3D MRI scans using size-aware data augmentation and transformer-enhanced nnUNet architectures.
@@ -15,3 +12,20 @@ An ML pipeline for automatic segmentation of vestibular schwannomas (VS) from 3D
 - Public VS-SEG dataset (242 patient scans)
 - T1-weighted and T2-weighted MRIs
 - Tumor contours in JSON, converted to NIfTI using 3DSlicer
+
+## 🔧 Setup
+```bash
+pip install niftynet tensorflow
+```
+
+## 🧠 Architecture
+- nnUNet backbone
+- Optional Transformer block between encoder/decoder
+- Fusion Decoder uses pretrained Swin Transformer
+
+## 🖼 Sample Outputs
+- Synthetic tumors in rare size bins
+- Segmentation visualizations coming soon
+
+## 📝 Citation
+Work based on: Poe, Wu, Conlin, Longhitano et al. (2024), BU NLP
